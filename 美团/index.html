@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>杭州美团网-杭州美食_酒店_旅游_团购_电影_吃喝玩乐</title>
+    <link rel="icon" href="images/favicon.ico"/>
+    <link rel="stylesheet" href="css/reset.css"/>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <style>
+        body{background:#F8F8F8}
+        .liveWrapper{width:1190px;height:730px;margin:50px auto 0 auto;position: relative;border:1px solid #E5E5E5;}
+        .title{width:1190px;height:45px;line-height:45px;background:#F2C146;border-radius:5px 5px 0 0;}
+        .title>a{float:left;font-size:18px;font-weight:bold;font-family:'Times New Roman', Times, serif;
+                    color:#fff;margin-left:18px;}
+        .title ul.titleList{float:left;padding-left:13px;}
+        .title ul.titleList li{float:left;position:relative}
+
+        .title ul.titleList .triangle:before {content:"";width:0;height:0;border-bottom:8px solid #fff;
+                    border-left:6px solid transparent;border-right:6px solid transparent;position:absolute;top:37px;
+                    left:35%;}
+
+        .title ul.titleList li a{padding:0 5px;color:#fff;display: inline-block;}
+        @font-face{font-family:myFont;src:url("font/iconfont.eot"),url('font/iconfont.svg'),
+                    url('font/iconfont.ttf'),url('font/iconfont.woff'),url('font/iconfont.woff2');}
+        .iconFont{font-family:'myFont';font-size:12px;color:#fff;padding-left:2px;}
+        .title>span{float:right;margin-right:15px;}
+        .title>span>a{color:#fff;display:inline-block;padding:0 2px 0 5px;font-size:14px;}
+        /*图片切换列表*/
+        .cont{width:1190px;height:685px;position:absolute;top:45px;left:0;background:#fff;}
+        .contentWrapper{z-index:999;display: block}
+        .cont ul.contentList li{width:370px;height:332px;cursor:pointer;float:left;
+                        margin-left:20px;position:relative}
+        .cont ul.contentList li.marginTop{margin-top:20px;}
+        .cont ul.contentList li img{border-radius:5px;}
+        .cont ul.contentList li img.circlePic{width:50px;height:50px;border-radius:50%;
+                    position:absolute;top:180px;right:15px;}
+        .cont ul.contentList li h3{font-style:normal;font-size:16px;font-weight:normal;color:#222;
+            width:300px;height:20px;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;margin:20px 0 8px 0;}
+        .cont ul.contentList li h4{font-style:normal;font-weight:normal;font-size:12px;color:#999;
+                            margin-bottom:6px;}
+        .cont ul.contentList li span{font-size:20px;color:#f60;margin-top:12px;}
+        .cont ul.contentList li span i{font-size:14px;}
+    </style>
+</head>
+<body>
+    <div class="liveWrapper">
+        <div class="title">
+            <a href="#">推荐民宿</a>
+            <ul class="titleList">
+                <li class="triangle"><a href="#">上海</a></li>
+                <li><a href="#">南京</a></li>
+                <li><a href="#">苏州</a></li>
+                <li><a href="#">合肥</a></li>
+                <li><a href="#">南昌</a></li>
+                <li><a href="#">福州</a></li>
+                <li><a href="#">宁波</a></li>
+                <li><a href="#">无锡</a></li>
+                <li><a href="#">扬州</a></li>
+                <li><a href="#">嘉兴</a></li>
+            </ul>
+            <span><a href="#">全部<i class="iconFont">&#xe6ab;</i></a></span>
+        </div>
+        <div class="content">
+            <div class="contentWrapper cont">
+                <ul class="contentList">
+                    <li class="marginTop">
+                        <img  src="images/pic1.jpg" class="circlePic" alt="">
+                        <img src="images/address1.jpg" alt=""/>
+                        <h3>乐园周边包接送乐园，十分钟到乐园，小区里单门独户一整套房子两室一厅厨卫齐全。周边菜场超市早点齐全，房子很安静。</h3>
+                        <h4>整套2居室·可住4人|迪士尼度假区周边</h4>
+                        <span><i>￥</i>288</span>
+                    </li>
+                    <li class="marginTop">
+                        <img  src="images/pic2.jpg" class="circlePic" alt="">
+                        <img src="images/address2.jpg" alt=""/>
+                        <h3>【素居】浦东万达/距迪士尼15分钟车程/提供接送班车/楼下配套娱乐丰富生活方便/公交直达人民广场外滩南京路/宜家风格</h3>
+                        <h4>整套1居室·可住2人|周浦康桥地区</h4>
+                        <span><i>￥</i>238</span>
+                    </li>
+                    <li class="marginTop">
+                        <img  src="images/pic3.jpg" class="circlePic" alt="">
+                        <img src="images/address3.jpg" alt=""/>
+                        <h3>南京路步行街/商圈/豪装</h3>
+                        <h4>整套1居室·可住2人|人民广场/外滩</h4>
+                        <span><i>￥</i>388</span>
+                    </li>
+                    <li>
+                        <img  src="images/pic4.jpg" class="circlePic" alt="">
+                        <img src="images/address4.jpg" alt=""/>
+                        <h3>【喜欢你】舒适loft/简洁北欧风/上海文化广场/田子坊/日月光/思南公馆/淮海路商圈/瑞金医院/城隍庙/外滩/迪士尼</h3>
+                        <h4>整套1居室·可住4人|衡山路地区</h4>
+                        <span><i>￥</i>388</span>
+                    </li>
+                    <li>
+                        <img  src="images/pic5.jpg" class="circlePic" alt="">
+                        <img src="images/address5.jpg" alt=""/>
+                        <h3>悦达南郊华都，精装修民宿，做一间温暖的小屋，遇到一群温暖的人</h3>
+                        <h4>整套1居室·可住2人|奉贤开发区</h4>
+                        <span><i>￥</i>168</span>
+                    </li>
+                    <li>
+                        <img  src="images/pic6.jpg" class="circlePic" alt="">
+                        <img src="images/address6.jpg" alt=""/>
+                        <h3>临港新城海洋公园旁舒适大床房。</h3>
+                        <h4>整套1居室·可住2人|滴水湖临港地区</h4>
+                        <span><i>￥</i>198</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="cont">
+                <ul class="contentList">
+                    <li class="marginTop">
+                        <img  src="images/pic7.jpg" class="circlePic" alt="">
+                        <img src="images/address7.jpg" alt=""/>
+                        <h3>云锦路地铁站欧尚超市楼上单室套优居小公寓</h3>
+                        <h4>整套1居室·可住2人|莫愁湖/水西门</h4>
+                        <span><i>￥</i>108</span>
+                    </li>
+                    <li class="marginTop">
+                        <img  src="images/pic8.jpg" class="circlePic" alt="">
+                        <img src="images/address8.jpg" alt=""/>
+                        <h3>「郑和公园」近地铁夫子庙/老门东/秦淮河</h3>
+                        <h4>整套2居室·可住2人|常府街/长白街</h4>
+                        <span><i>￥</i>178</span>
+                    </li>
+                    <li class="marginTop">
+                        <img  src="images/pic9.jpg" class="circlePic" alt="">
+                        <img src="images/address9.jpg" alt=""/>
+                        <h3>摩登日式 精致榻榻米 靠南京南站 毗邻夫子庙 地铁沿线 温馨舒适 干净整饬</h3>
+                        <h4>整套1居室·可住2人|南京南站/证大喜马拉雅</h4>
+                        <span><i>￥</i>135</span>
+                    </li>
+                    <li>
+                        <img  src="images/pic9.jpg" class="circlePic" alt="">
+                        <img src="images/address9.jpg" alt=""/>
+                        <h3>摩登日式 温馨榻榻米  靠南京南站 毗邻夫子庙 地铁沿线 温馨舒适 干净整饬</h3>
+                        <h4>整套1居室·可住2人|南京南站/证大喜马拉雅</h4>
+                        <span><i>￥</i>388</span>
+                    </li>
+                    <li>
+                        <img  src="images/pic10.jpg" class="circlePic" alt="">
+                        <img src="images/address11.jpg" alt=""/>
+                        <h3>【大熊の家】俯瞰南京城，享受空中全景浴缸，网红秋千床，简欧风格，百寸家庭影院-紧邻新街口/夫子庙/南京站/山西路</h3>
+                        <h4>整套1居室·可住2人|奉贤开发区</h4>
+                        <span><i>￥</i>168</span>
+                    </li>
+                    <li>
+                        <img  src="images/pic11.jpg" class="circlePic" alt="">
+                        <img src="images/address12.jpg" alt=""/>
+                        <h3>临港新城海洋公园旁舒适大床房。</h3>
+                        <h4>整套1居室·可住2人|滴水湖临港地区</h4>
+                        <span><i>￥</i>198</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="cont">
+                <ul class="contentList">
+                    <li class="marginTop">
+                        <img  src="images/pic13.jpg" class="circlePic" alt="">
+                        <img src="images/address13.jpg" alt=""/>
+                        <h3>乐园周边包接送乐园，十分钟到乐园，小区里单门独户一整套房子两室一厅厨卫齐全。周边菜场超市早点齐全，房子很安静。</h3>
+                        <h4>整套2居室·可住4人|迪士尼度假区周边</h4>
+                        <span><i>￥</i>288</span>
+                    </li>
+                    <li class="marginTop">
+                        <img  src="images/pic14.jpg" class="circlePic" alt="">
+                        <img src="images/address14.jpg" alt=""/>
+                        <h3>【素居】浦东万达/距迪士尼15分钟车程/提供接送班车/楼下配套娱乐丰富生活方便/公交直达人民广场外滩南京路/宜家风格</h3>
+                        <h4>整套1居室·可住2人|周浦康桥地区</h4>
+                        <span><i>￥</i>238</span>
+                    </li>
+                    <li class="marginTop">
+                        <img  src="images/pic15.jpg" class="circlePic" alt="">
+                        <img src="images/address15.jpg" alt=""/>
+                        <h3>南京路步行街/商圈/豪装</h3>
+                        <h4>整套1居室·可住2人|人民广场/外滩</h4>
+                        <span><i>￥</i>388</span>
+                    </li>
+                    <li>
+                        <img  src="images/pic16.jpg" class="circlePic" alt="">
+                        <img src="images/address16.jpg" alt=""/>
+                        <h3>【喜欢你】舒适loft/简洁北欧风/上海文化广场/田子坊/日月光/思南公馆/淮海路商圈/瑞金医院/城隍庙/外滩/迪士尼</h3>
+                        <h4>整套1居室·可住4人|衡山路地区</h4>
+                        <span><i>￥</i>388</span>
+                    </li>
+                    <li>
+                        <img  src="images/pic17.jpg" class="circlePic" alt="">
+                        <img src="images/address17.jpg" alt=""/>
+                        <h3>悦达南郊华都，精装修民宿，做一间温暖的小屋，遇到一群温暖的人</h3>
+                        <h4>整套1居室·可住2人|奉贤开发区</h4>
+                        <span><i>￥</i>168</span>
+                    </li>
+                    <li>
+                        <img  src="images/pic18.jpg" class="circlePic" alt="">
+                        <img src="images/address18.jpg" alt=""/>
+                        <h3>临港新城海洋公园旁舒适大床房。</h3>
+                        <h4>整套1居室·可住2人|滴水湖临港地区</h4>
+                        <span><i>￥</i>198</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="cont">
+                <ul class="contentList">
+                    <li class="marginTop">
+                        <img  src="images/pic19.jpg" class="circlePic" alt="">
+                        <img src="images/address19.jpg" alt=""/>
+                        <h3>乐园周边包接送乐园，十分钟到乐园，小区里单门独户一整套房子两室一厅厨卫齐全。周边菜场超市早点齐全，房子很安静。</h3>
+                        <h4>整套2居室·可住4人|迪士尼度假区周边</h4>
+                        <span><i>￥</i>288</span>
+                    </li>
+                    <li class="marginTop">
+                        <img  src="images/pic20.jpg" class="circlePic" alt="">
+                        <img src="images/address20.jpg" alt=""/>
+                        <h3>【素居】浦东万达/距迪士尼15分钟车程/提供接送班车/楼下配套娱乐丰富生活方便/公交直达人民广场外滩南京路/宜家风格</h3>
+                        <h4>整套1居室·可住2人|周浦康桥地区</h4>
+                        <span><i>￥</i>238</span>
+                    </li>
+                    <li class="marginTop">
+                        <img  src="images/pic21.jpg" class="circlePic" alt="">
+                        <img src="images/address21.jpg" alt=""/>
+                        <h3>南京路步行街/商圈/豪装</h3>
+                        <h4>整套1居室·可住2人|人民广场/外滩</h4>
+                        <span><i>￥</i>388</span>
+                    </li>
+                    <li>
+                        <img  src="images/pic22.jpg" class="circlePic" alt="">
+                        <img src="images/address22.jpg" alt=""/>
+                        <h3>【喜欢你】舒适loft/简洁北欧风/上海文化广场/田子坊/日月光/思南公馆/淮海路商圈/瑞金医院/城隍庙/外滩/迪士尼</h3>
+                        <h4>整套1居室·可住4人|衡山路地区</h4>
+                        <span><i>￥</i>388</span>
+                    </li>
+                    <li>
+                        <img  src="images/pic23.jpg" class="circlePic" alt="">
+                        <img src="images/address23.jpg" alt=""/>
+                        <h3>悦达南郊华都，精装修民宿，做一间温暖的小屋，遇到一群温暖的人</h3>
+                        <h4>整套1居室·可住2人|奉贤开发区</h4>
+                        <span><i>￥</i>168</span>
+                    </li>
+                    <li>
+                        <img  src="images/pic24.jpg" class="circlePic" alt="">
+                        <img src="images/address24.jpg" alt=""/>
+                        <h3>临港新城海洋公园旁舒适大床房。</h3>
+                        <h4>整套1居室·可住2人|滴水湖临港地区</h4>
+                        <span><i>￥</i>198</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="cont">
+                <ul class="contentList">
+                    <li class="marginTop">
+                        <img  src="images/pic25.jpg" class="circlePic" alt="">
+                        <img src="images/address25.jpg" alt=""/>
+                        <h3>乐园周边包接送乐园，十分钟到乐园，小区里单门独户一整套房子两室一厅厨卫齐全。周边菜场超市早点齐全，房子很安静。</h3>
+                        <h4>整套2居室·可住4人|迪士尼度假区周边</h4>
+                        <span><i>￥</i>288</span>
+                    </li>
+                    <li class="marginTop">
+                        <img  src="images/pic26.jpg" class="circlePic" alt="">
+                        <img src="images/address26.jpg" alt=""/>
+                        <h3>【素居】浦东万达/距迪士尼15分钟车程/提供接送班车/楼下配套娱乐丰富生活方便/公交直达人民广场外滩南京路/宜家风格</h3>
+                        <h4>整套1居室·可住2人|周浦康桥地区</h4>
+                        <span><i>￥</i>238</span>
+                    </li>
+                    <li class="marginTop">
+                        <img  src="images/pic27.jpg" class="circlePic" alt="">
+                        <img src="images/address27.jpg" alt=""/>
+                        <h3>南京路步行街/商圈/豪装</h3>
+                        <h4>整套1居室·可住2人|人民广场/外滩</h4>
+                        <span><i>￥</i>388</span>
+                    </li>
+                    <li>
+                        <img  src="images/pic28.jpg" class="circlePic" alt="">
+                        <img src="images/address28.jpg" alt=""/>
+                        <h3>【喜欢你】舒适loft/简洁北欧风/上海文化广场/田子坊/日月光/思南公馆/淮海路商圈/瑞金医院/城隍庙/外滩/迪士尼</h3>
+                        <h4>整套1居室·可住4人|衡山路地区</h4>
+                        <span><i>￥</i>388</span>
+                    </li>
+                    <li>
+                        <img  src="images/pic29.jpg" class="circlePic" alt="">
+                        <img src="images/address29.jpg" alt=""/>
+                        <h3>悦达南郊华都，精装修民宿，做一间温暖的小屋，遇到一群温暖的人</h3>
+                        <h4>整套1居室·可住2人|奉贤开发区</h4>
+                        <span><i>￥</i>168</span>
+                    </li>
+                    <li>
+                        <img  src="images/pic30.jpg" class="circlePic" alt="">
+                        <img src="images/address30.jpg" alt=""/>
+                        <h3>临港新城海洋公园旁舒适大床房。</h3>
+                        <h4>整套1居室·可住2人|滴水湖临港地区</h4>
+                        <span><i>￥</i>198</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="cont">
+                <ul class="contentList">
+                    <li class="marginTop">
+                        <img  src="images/pic1.jpg" class="circlePic" alt="">
+                        <img src="images/address31.jpg" alt=""/>
+                        <h3>乐园周边包接送乐园，十分钟到乐园，小区里单门独户一整套房子两室一厅厨卫齐全。周边菜场超市早点齐全，房子很安静。</h3>
+                        <h4>整套2居室·可住4人|迪士尼度假区周边</h4>
+                        <span><i>￥</i>288</span>
+                    </li>
+                    <li class="marginTop">
+                        <img  src="images/pic2.jpg" class="circlePic" alt="">
+                        <img src="images/address32.jpg" alt=""/>
+                        <h3>【素居】浦东万达/距迪士尼15分钟车程/提供接送班车/楼下配套娱乐丰富生活方便/公交直达人民广场外滩南京路/宜家风格</h3>
+                        <h4>整套1居室·可住2人|周浦康桥地区</h4>
+                        <span><i>￥</i>238</span>
+                    </li>
+                    <li class="marginTop">
+                        <img  src="images/pic3.jpg" class="circlePic" alt="">
+                        <img src="images/address33.jpg" alt=""/>
+                        <h3>南京路步行街/商圈/豪装</h3>
+                        <h4>整套1居室·可住2人|人民广场/外滩</h4>
+                        <span><i>￥</i>388</span>
+                    </li>
+                    <li>
+                        <img  src="images/pic4.jpg" class="circlePic" alt="">
+                        <img src="images/address34.jpg" alt=""/>
+                        <h3>【喜欢你】舒适loft/简洁北欧风/上海文化广场/田子坊/日月光/思南公馆/淮海路商圈/瑞金医院/城隍庙/外滩/迪士尼</h3>
+                        <h4>整套1居室·可住4人|衡山路地区</h4>
+                        <span><i>￥</i>388</span>
+                    </li>
+                    <li>
+                        <img  src="images/pic5.jpg" class="circlePic" alt="">
+                        <img src="images/address35.jpg" alt=""/>
+                        <h3>悦达南郊华都，精装修民宿，做一间温暖的小屋，遇到一群温暖的人</h3>
+                        <h4>整套1居室·可住2人|奉贤开发区</h4>
+                        <span><i>￥</i>168</span>
+                    </li>
+                    <li>
+                        <img  src="images/pic6.jpg" class="circlePic" alt="">
+                        <img src="images/address36.jpg" alt=""/>
+                        <h3>临港新城海洋公园旁舒适大床房。</h3>
+                        <h4>整套1居室·可住2人|滴水湖临港地区</h4>
+                        <span><i>￥</i>198</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="cont">
+                <ul class="contentList">
+                    <li class="marginTop">
+                        <img  src="images/pic20.jpg" class="circlePic" alt="">
+                        <img src="images/address37.jpg" alt=""/>
+                        <h3>乐园周边包接送乐园，十分钟到乐园，小区里单门独户一整套房子两室一厅厨卫齐全。周边菜场超市早点齐全，房子很安静。</h3>
+                        <h4>整套2居室·可住4人|迪士尼度假区周边</h4>
+                        <span><i>￥</i>288</span>
+                    </li>
+                    <li class="marginTop">
+                        <img  src="images/pic22.jpg" class="circlePic" alt="">
+                        <img src="images/address38.jpg" alt=""/>
+                        <h3>【素居】浦东万达/距迪士尼15分钟车程/提供接送班车/楼下配套娱乐丰富生活方便/公交直达人民广场外滩南京路/宜家风格</h3>
+                        <h4>整套1居室·可住2人|周浦康桥地区</h4>
+                        <span><i>￥</i>238</span>
+                    </li>
+                    <li class="marginTop">
+                        <img  src="images/pic24.jpg" class="circlePic" alt="">
+                        <img src="images/address39.jpg" alt=""/>
+                        <h3>南京路步行街/商圈/豪装</h3>
+                        <h4>整套1居室·可住2人|人民广场/外滩</h4>
+                        <span><i>￥</i>388</span>
+                    </li>
+                    <li>
+                        <img  src="images/pic26.jpg" class="circlePic" alt="">
+                        <img src="images/address40.jpg" alt=""/>
+                        <h3>【喜欢你】舒适loft/简洁北欧风/上海文化广场/田子坊/日月光/思南公馆/淮海路商圈/瑞金医院/城隍庙/外滩/迪士尼</h3>
+                        <h4>整套1居室·可住4人|衡山路地区</h4>
+                        <span><i>￥</i>388</span>
+                    </li>
+                    <li>
+                        <img  src="images/pic28.jpg" class="circlePic" alt="">
+                        <img src="images/address41.jpg" alt=""/>
+                        <h3>悦达南郊华都，精装修民宿，做一间温暖的小屋，遇到一群温暖的人</h3>
+                        <h4>整套1居室·可住2人|奉贤开发区</h4>
+                        <span><i>￥</i>168</span>
+                    </li>
+                    <li>
+                        <img  src="images/pic30.jpg" class="circlePic" alt="">
+                        <img src="images/address42.jpg" alt=""/>
+                        <h3>临港新城海洋公园旁舒适大床房。</h3>
+                        <h4>整套1居室·可住2人|滴水湖临港地区</h4>
+                        <span><i>￥</i>198</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="cont">
+                <ul class="contentList">
+                    <li class="marginTop">
+                        <img  src="images/pic11.jpg" class="circlePic" alt="">
+                        <img src="images/address43.jpg" alt=""/>
+                        <h3>乐园周边包接送乐园，十分钟到乐园，小区里单门独户一整套房子两室一厅厨卫齐全。周边菜场超市早点齐全，房子很安静。</h3>
+                        <h4>整套2居室·可住4人|迪士尼度假区周边</h4>
+                        <span><i>￥</i>288</span>
+                    </li>
+                    <li class="marginTop">
+                        <img  src="images/pic13.jpg" class="circlePic" alt="">
+                        <img src="images/address44.jpg" alt=""/>
+                        <h3>【素居】浦东万达/距迪士尼15分钟车程/提供接送班车/楼下配套娱乐丰富生活方便/公交直达人民广场外滩南京路/宜家风格</h3>
+                        <h4>整套1居室·可住2人|周浦康桥地区</h4>
+                        <span><i>￥</i>238</span>
+                    </li>
+                    <li class="marginTop">
+                        <img  src="images/pic15.jpg" class="circlePic" alt="">
+                        <img src="images/address45.jpg" alt=""/>
+                        <h3>南京路步行街/商圈/豪装</h3>
+                        <h4>整套1居室·可住2人|人民广场/外滩</h4>
+                        <span><i>￥</i>388</span>
+                    </li>
+                    <li>
+                        <img  src="images/pic17.jpg" class="circlePic" alt="">
+                        <img src="images/address46.jpg" alt=""/>
+                        <h3>【喜欢你】舒适loft/简洁北欧风/上海文化广场/田子坊/日月光/思南公馆/淮海路商圈/瑞金医院/城隍庙/外滩/迪士尼</h3>
+                        <h4>整套1居室·可住4人|衡山路地区</h4>
+                        <span><i>￥</i>388</span>
+                    </li>
+                    <li>
+                        <img  src="images/pic19.jpg" class="circlePic" alt="">
+                        <img src="images/address47.jpg" alt=""/>
+                        <h3>悦达南郊华都，精装修民宿，做一间温暖的小屋，遇到一群温暖的人</h3>
+                        <h4>整套1居室·可住2人|奉贤开发区</h4>
+                        <span><i>￥</i>168</span>
+                    </li>
+                    <li>
+                        <img  src="images/pic21.jpg" class="circlePic" alt="">
+                        <img src="images/address48.jpg" alt=""/>
+                        <h3>临港新城海洋公园旁舒适大床房。</h3>
+                        <h4>整套1居室·可住2人|滴水湖临港地区</h4>
+                        <span><i>￥</i>198</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="cont">
+                <ul class="contentList">
+                    <li class="marginTop">
+                        <img  src="images/pic23.jpg" class="circlePic" alt="">
+                        <img src="images/address49.jpg" alt=""/>
+                        <h3>乐园周边包接送乐园，十分钟到乐园，小区里单门独户一整套房子两室一厅厨卫齐全。周边菜场超市早点齐全，房子很安静。</h3>
+                        <h4>整套2居室·可住4人|迪士尼度假区周边</h4>
+                        <span><i>￥</i>288</span>
+                    </li>
+                    <li class="marginTop">
+                        <img  src="images/pic25.jpg" class="circlePic" alt="">
+                        <img src="images/address50.jpg" alt=""/>
+                        <h3>【素居】浦东万达/距迪士尼15分钟车程/提供接送班车/楼下配套娱乐丰富生活方便/公交直达人民广场外滩南京路/宜家风格</h3>
+                        <h4>整套1居室·可住2人|周浦康桥地区</h4>
+                        <span><i>￥</i>238</span>
+                    </li>
+                    <li class="marginTop">
+                        <img  src="images/pic27.jpg" class="circlePic" alt="">
+                        <img src="images/address51.jpg" alt=""/>
+                        <h3>南京路步行街/商圈/豪装</h3>
+                        <h4>整套1居室·可住2人|人民广场/外滩</h4>
+                        <span><i>￥</i>388</span>
+                    </li>
+                    <li>
+                        <img  src="images/pic29.jpg" class="circlePic" alt="">
+                        <img src="images/address52.jpg" alt=""/>
+                        <h3>【喜欢你】舒适loft/简洁北欧风/上海文化广场/田子坊/日月光/思南公馆/淮海路商圈/瑞金医院/城隍庙/外滩/迪士尼</h3>
+                        <h4>整套1居室·可住4人|衡山路地区</h4>
+                        <span><i>￥</i>388</span>
+                    </li>
+                    <li>
+                        <img  src="images/pic30.jpg" class="circlePic" alt="">
+                        <img src="images/address53.jpg" alt=""/>
+                        <h3>悦达南郊华都，精装修民宿，做一间温暖的小屋，遇到一群温暖的人</h3>
+                        <h4>整套1居室·可住2人|奉贤开发区</h4>
+                        <span><i>￥</i>168</span>
+                    </li>
+                    <li>
+                        <img  src="images/pic29.jpg" class="circlePic" alt="">
+                        <img src="images/address54.jpg" alt=""/>
+                        <h3>临港新城海洋公园旁舒适大床房。</h3>
+                        <h4>整套1居室·可住2人|滴水湖临港地区</h4>
+                        <span><i>￥</i>198</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="cont">
+                <ul class="contentList">
+                <li class="marginTop">
+                    <img  src="images/pic25.jpg" class="circlePic" alt="">
+                    <img src="images/address55.jpg" alt=""/>
+                    <h3>乐园周边包接送乐园，十分钟到乐园，小区里单门独户一整套房子两室一厅厨卫齐全。周边菜场超市早点齐全，房子很安静。</h3>
+                    <h4>整套2居室·可住4人|迪士尼度假区周边</h4>
+                    <span><i>￥</i>288</span>
+                </li>
+                <li class="marginTop">
+                    <img  src="images/pic21.jpg" class="circlePic" alt="">
+                    <img src="images/address56.jpg" alt=""/>
+                    <h3>【素居】浦东万达/距迪士尼15分钟车程/提供接送班车/楼下配套娱乐丰富生活方便/公交直达人民广场外滩南京路/宜家风格</h3>
+                    <h4>整套1居室·可住2人|周浦康桥地区</h4>
+                    <span><i>￥</i>238</span>
+                </li>
+                <li class="marginTop">
+                    <img  src="images/pic17.jpg" class="circlePic" alt="">
+                    <img src="images/address57.jpg" alt=""/>
+                    <h3>南京路步行街/商圈/豪装</h3>
+                    <h4>整套1居室·可住2人|人民广场/外滩</h4>
+                    <span><i>￥</i>388</span>
+                </li>
+                <li>
+                    <img  src="images/pic13.jpg" class="circlePic" alt="">
+                    <img src="images/address58.jpg" alt=""/>
+                    <h3>【喜欢你】舒适loft/简洁北欧风/上海文化广场/田子坊/日月光/思南公馆/淮海路商圈/瑞金医院/城隍庙/外滩/迪士尼</h3>
+                    <h4>整套1居室·可住4人|衡山路地区</h4>
+                    <span><i>￥</i>388</span>
+                </li>
+                <li>
+                    <img  src="images/pic9.jpg" class="circlePic" alt="">
+                    <img src="images/address59.jpg" alt=""/>
+                    <h3>悦达南郊华都，精装修民宿，做一间温暖的小屋，遇到一群温暖的人</h3>
+                    <h4>整套1居室·可住2人|奉贤开发区</h4>
+                    <span><i>￥</i>168</span>
+                </li>
+                <li>
+                    <img  src="images/pic4.jpg" class="circlePic" alt="">
+                    <img src="images/address60.jpg" alt=""/>
+                    <h3>临港新城海洋公园旁舒适大床房。</h3>
+                    <h4>整套1居室·可住2人|滴水湖临港地区</h4>
+                    <span><i>￥</i>198</span>
+                </li>
+            </ul>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(function(){
+            $('.title ul li').hover(function(){
+                var _index = $(this).index();
+                $('.content div').eq(_index).addClass('contentWrapper').siblings().removeClass('contentWrapper');
+                $(this).addClass('triangle').siblings().removeClass('triangle');
+            },function(){});
+        });
+    </script>
+</body>
+</html>

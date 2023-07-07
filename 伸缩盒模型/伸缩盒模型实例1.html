@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>伸缩盒模型</title>
+    <style>
+        .box{
+            display: flex;
+        }
+        .item{
+            flex-grow: 1;
+            height: 50px;
+            text-align: center;
+            padding-top: 60px;
+        }
+        .dy{
+            background: url(img/电影.png) no-repeat center 10px;
+            background-size: 50px 50px;
+        }
+        .wm{
+            background: url(img/外卖.png) no-repeat center 10px;
+            background-size: 50px 50px;
+        }
+        .tg{
+            background: url(img/团购.png) no-repeat center 10px;
+            background-size: 50px 50px;
+        }
+        .dc{
+            background: url(img/打车.png) no-repeat center 10px;
+            background-size: 50px 50px;
+        }
+        .cjd{
+            background: url(img/查景点.png) no-repeat center 10px;
+            background-size: 50px 50px;
+        }
+        .jdy{
+            background: url(img/酒店预订.png) no-repeat center 10px;
+            background-size: 50px 50px;
+        }
+        .phb{
+            background: url(img/排行榜.png) no-repeat center 10px;
+            background-size: 50px 50px;
+        }
+        .gd{
+            background: url(img/更多.png) no-repeat center 10px;
+            background-size: 50px 50px;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    <div class="item dy">电影</div>
+    <div class="item wm">外卖</div>
+    <div class="item tg">团购</div>
+    <div class="item dc">打车</div>
+</div>
+<div class="box">
+    <div class="item cjd">查景点</div>
+    <div class="item jdy">酒店预订</div>
+    <div class="item phb">排行榜</div>
+    <div class="item gd">更多</div>
+</div>
+</body>
+</html>

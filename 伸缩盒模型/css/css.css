@@ -1,0 +1,300 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+/*导航内容*/
+.content{
+    margin:0 auto;
+    width:1250px;
+    height: 700px;
+    border:1px solid #e5e5e5;
+}
+.con_life{
+    height: 45px;
+    background:#c1ac89;
+    margin-bottom: 20px;
+    border-radius:6px 6px 0 0;
+}
+.con_life ul{
+    list-style: none;
+
+
+}
+.con_life ul li{
+    float:left;
+    padding-right: 10px;
+    line-height: 45px;
+    font-size:13px;
+}
+.con_life .li_ygd{
+    padding:0 25px 0 20px;
+    font-size:18px;
+}
+.con_life ul li a{
+    color:#fff;
+    text-decoration: none;
+}
+/*上左边内容区域*/
+.con_center{
+    display: flex;
+}
+.con_center div{
+    flex-grow: 1;
+    height: 307px;
+    width: 305px;
+}
+.con_center .center_left{
+    background:url("../img/mj1.png") no-repeat center top;
+    }
+.center_left{
+    position: relative;
+}
+.center_left p{
+    position: absolute;
+    left:20px;
+    top:220px;
+}
+.center_left p a{
+    font-size:16px;
+    text-decoration: none;
+    color:black;
+}
+.center_left h4{
+    position: absolute;
+    left:20px;
+    top:245px;
+}
+.center_left h4 button{
+    font-size:12px;
+    color:#999;
+    cursor:pointer;
+    background:#fff;
+    border:1px solid #d8d8d8;
+    margin-right: 6px;
+}
+.center_left h5{
+    position: absolute;
+    left:20px;
+    top:270px;
+    font-size:20px;
+    color:#be9e4d;
+}
+.center_left h5 span{
+    font-weight: normal;
+    font-size:13px;
+}
+/*中中间内容区域*/
+.con_center .center_center{
+    background:url("../img/mj2.jpg") no-repeat center top;
+}
+.center_center{
+    position: relative;
+}
+.center_center p{
+    position: absolute;
+    left:20px;
+    top:220px;
+}
+.center_center p a{
+    font-size:16px;
+    text-decoration: none;
+    color:black;
+}
+.center_center h4{
+    position: absolute;
+    left:20px;
+    top:245px;
+}
+.center_center h4 button{
+    font-size:12px;
+    color:#999;
+    cursor:pointer;
+    background:#fff;
+    border:1px solid #d8d8d8;
+    margin-right: 6px;
+}
+.center_center h5{
+    position: absolute;
+    left:20px;
+    top:270px;
+    font-size:20px;
+    color:#be9e4d;
+}
+.center_center h5 span{
+    font-weight: normal;
+    font-size:13px;
+}
+/*右边内容区域*/
+.con_center .center_right{
+    background:url("../img/mj3.jpg") no-repeat center top;
+}
+.center_right{
+    position: relative;
+}
+.center_right p{
+    position: absolute;
+    left:20px;
+    top:220px;
+}
+.center_right p a{
+    font-size:16px;
+    text-decoration: none;
+    color:black;
+}
+.center_right h4{
+    position: absolute;
+    left:20px;
+    top:245px;
+}
+.center_right h4 button{
+    font-size:12px;
+    color:#999;
+    cursor:pointer;
+    background:#fff;
+    border:1px solid #d8d8d8;
+    margin-right: 6px;
+}
+.center_right h5{
+    position: absolute;
+    left:20px;
+    top:270px;
+    font-size:20px;
+    color:#be9e4d;
+}
+.center_right h5 span{
+    font-weight: normal;
+    font-size:13px;
+}
+
+/*第三部分*/
+.con_right{
+    display: flex;
+}
+.con_right div{
+    flex-grow: 1;
+    height: 307px;
+    width: 305px;
+}
+.con_right .right_left{
+    background:url("../img/mj4.jpg") no-repeat center top;
+}
+.right_left{
+    position: relative;
+}
+.right_left p{
+    position: absolute;
+    left:20px;
+    top:220px;
+}
+.right_left p a{
+    font-size:16px;
+    text-decoration: none;
+    color:black;
+}
+.right_left h4{
+    position: absolute;
+    left:20px;
+    top:245px;
+}
+.right_left h4 button{
+    font-size:12px;
+    color:#999;
+    cursor:pointer;
+    background:#fff;
+    border:1px solid #d8d8d8;
+    margin-right: 6px;
+}
+.right_left h5{
+    position: absolute;
+    left:20px;
+    top:270px;
+    font-size:20px;
+    color:#be9e4d;
+}
+.right_left h5 span{
+    font-weight: normal;
+    font-size:13px;
+}
+/*中中间内容区域*/
+.con_right .right_center{
+    background:url("../img/mj5.jpg") no-repeat center top;
+}
+.right_center{
+    position: relative;
+}
+.right_center p{
+    position: absolute;
+    left:20px;
+    top:220px;
+}
+.right_center p a{
+    font-size:16px;
+    text-decoration: none;
+    color:black;
+}
+.right_center h4{
+    position: absolute;
+    left:20px;
+    top:245px;
+}
+.right_center h4 button{
+    font-size:12px;
+    color:#999;
+    cursor:pointer;
+    background:#fff;
+    border:1px solid #d8d8d8;
+    margin-right: 6px;
+}
+.right_center h5{
+    position: absolute;
+    left:20px;
+    top:270px;
+    font-size:20px;
+    color:#be9e4d;
+}
+.right_center h5 span{
+    font-weight: normal;
+    font-size:13px;
+}
+/*右边内容区域*/
+.con_right .right_right{
+    background:url("../img/mj6.jpg") no-repeat center top;
+}
+.right_right{
+    position: relative;
+}
+.right_right p{
+    position: absolute;
+    left:20px;
+    top:220px;
+}
+.right_right p a{
+    font-size:16px;
+    text-decoration: none;
+    color:black;
+}
+.right_right h4{
+    position: absolute;
+    left:20px;
+    top:245px;
+}
+.right_right h4 button{
+    font-size:12px;
+    color:#999;
+    cursor:pointer;
+    background:#fff;
+    border:1px solid #d8d8d8;
+    margin-right: 6px;
+}
+.right_right h5{
+    position: absolute;
+    left:20px;
+    top:270px;
+    font-size:20px;
+    color:#be9e4d;
+}
+.right_right h5 span{
+    font-weight: normal;
+    font-size:13px;
+}

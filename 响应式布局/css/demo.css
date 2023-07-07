@@ -1,0 +1,33 @@
+*{margin:0;padding:0;}
+ul li{list-style:none}
+ /*顶部开始样式*/
+.wrap{width:85%;margin:0 auto;}
+.leftImg,.rigthImg{float:left;}
+.leftImg img,.rigthImg img{width:100%;}
+/*顶部结束样式*/
+/*底部开始样式*/
+.wrapBottom ul.imgList li{width:32%;float:left;}
+.wrapBottom ul.imgList li img{width:100%}
+       
+/*底部结束样式*/
+ @media screen and (min-width:992px){
+    /*当屏幕的宽度大于992px时，执行这里面的代码*/
+    .leftImg{margin-right:2%;}
+    .leftImg,.rigthImg{width:49%;}
+    .wrapBottom ul.imgList li{margin-top:50px;}
+
+    .wrapBottom ul.imgList li{width:32%;}
+    .wrapBottom ul.imgList li:nth-child(2), .wrapBottom ul.imgList li:nth-child(5){margin-left:2%;margin-right:2%;}   
+ }
+@media screen and (max-width:991px){
+    /*当屏幕的宽度小于991px且大于768px时，执行这里面的代码*/
+    .leftImg{margin-bottom:2%;}
+    .leftImg,.rigthImg{width:100%;} 
+
+    .wrapBottom ul.imgList li{width:100%;}
+    .wrapBottom ul.imgList li:nth-child(1),.wrapBottom ul.imgList li:nth-child(3),
+    .wrapBottom ul.imgList li:nth-child(5){margin-right:0;}
+    .wrapBottom ul.imgList li{margin-top:2%;}
+
+}
+    

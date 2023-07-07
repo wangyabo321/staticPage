@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta content="text/plain" charset="UTF-8">
+<title>Document</title>
+<style>
+    *{margin: 0;padding: 0;}
+    canvas{display:block;margin:0 auto;}
+}
+</style>
+</head>
+<body>
+    <br><br><br>
+<canvas id="myCanvas" width="400" height="400">
+      Your browser does not support the canvas element.
+</canvas>
+</body>
+<script>
+var c=document.getElementById("myCanvas");
+var cnt=c.getContext("2d");
+cnt.translate(200,200);//重设中心点
+t=window.setInterval(function(){
+        cnt.clearRect(-200,-200,600,600);//清除之前
+        //绘制的太极
+        cnt.save();
+        cnt.beginPath();
+        cnt.arc(0,0,200,-Math.PI*1/2,-Math.PI*3/2,true);
+        cnt.lineWidth = 2;
+        cnt.fill();
+        cnt.beginPath();
+        cnt.arc(0,0,200,Math.PI*3/2,Math.PI*1/2,false);
+        cnt.lineWidth = 2;
+        cnt.stroke();
+        
+
+        cnt.beginPath();
+        cnt.arc(0,-100,100,0,Math.PI*2,false);
+        cnt.fillStyle = "#ffffff";
+        cnt.fill();
+        
+        cnt.beginPath();
+        cnt.arc(0,100,100,0,Math.PI*2,false);
+        cnt.fillStyle = '#000000';
+        cnt.fill();
+
+        cnt.beginPath();
+        cnt.arc(0,-100,25,0,Math.PI*2,false);
+        cnt.fillStyle = "#000000";
+        cnt.fill();
+            
+        cnt.beginPath();
+        cnt.arc(0,100,25,0,Math.PI*2,false);
+        cnt.fillStyle = "#fff";
+        cnt.fill();
+        cnt.restore();
+        cnt.rotate(2*Math.PI/180);//旋转角度
+},50);//旋转速度
+</script>
+</html>

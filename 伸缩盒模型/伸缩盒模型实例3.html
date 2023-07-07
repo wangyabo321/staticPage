@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>伸缩盒模型实例3</title>
+    <style>
+        *{margin:0;padding:0}
+        .nav{width: 1305px;height:50px;margin:0 auto;display:flex;}
+        .nav div:not(.dh){flex-grow:1;position:relative}
+        .nav div.dh{width:80px}
+        .sy,.zl,.gc,.zb,.hw{text-align: center;line-height: 55px;}
+        .sy{background:url(img/icons.png) no-repeat -642px -1175px;}
+        .zl{background:url(img/icons.png) no-repeat -67px -1813px;}
+        .gc{background:url(img/icons.png) no-repeat -67px -2006px;}
+        .zb{background:url(img/icons.png) no-repeat -67px -1879px;}
+        .hw{background:url(img/icons.png) no-repeat -60px -1944px;}
+        .sy a{color:black;text-decoration:none;font-size:13px;font-family:"Microsoft YaHei";}
+        .dongH{text-align:center;line-height: 55px}
+        .dongH button{position:absolute;top:0;left:33%;height: 13px;border-radius:3px;background: #ffafc9;border:0;color:white;font-size:10px;line-height:13px;font-family:"Microsoft YaHei";margin-top:3px;}
+        .dongH a{color:black;text-decoration:none;font-size:13px;font-family:"Microsoft YaHei";}
+        .dh{background:url(img/dh.gif) no-repeat center;height: 44px}
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <div class="sy"><a href="#">首页</a></div>
+        <div class="dongH">
+            <button>999+</button>
+            <a href="#">动画</a>
+        </div>
+        <div class="dongH"><button>131</button>
+            <a href="#">番剧</a></div>
+        <div class="dongH"><button>128</button>
+            <a href="#">国创</a></div>
+        <div class="dongH"><button>999+</button>
+            <a href="#">音乐</a></div>
+        <div class="dongH"><button>241</button>
+            <a href="#">舞蹈</a></div>
+        <div class="dongH"><button>999+</button>
+            <a href="#">游戏</a></div>
+        <div class="dongH"><button>999+</button>
+            <a href="#">科技</a></div>
+        <div class="dongH"><button>999+</button>
+            <a href="#">生活</a></div>
+        <div class="dongH"><button>164</button>
+            <a href="#">鬼畜</a></div>
+        <div class="dongH"><button>597</button>
+            <a href="#">时尚</a></div>
+        <div class="dongH"><button>82</button>
+            <a href="#">广告</a></div>
+        <div class="dongH"><button>999+</button>
+            <a href="#">娱乐</a></div>
+        <div class="dongH"><button>999+</button>
+            <a href="#">影视</a></div>
+        <div class="dongH"><button>214</button>
+            <a href="#">放映厅</a></div>
+        <div class="zl sy"><a href="#">专栏</a></div>
+        <div class="gc sy"><a href="#">广场</a></div>
+        <div class="zb sy"><a href="#">直播</a></div>
+        <div class="hw sy"><a href="#">小黑屋</a></div>
+        <div class="dh"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>小米官网</title>
+    <link rel="stylesheet" href="icon-font/iconfont.css"/>
+    <link rel="stylesheet" href="font-icon/iconfont.css"/>
+    <style>
+        /*公共样式*/
+        *{margin:0;padding:0}
+        body{font-size:14px;background:#f5f5f5;font-family: 'Microsoft YaHei', 'Times New Roman', Times, serif;
+            color:#333;}
+        a{color:#333;text-decoration:none;}
+        ul li{list-style:none;}
+        h2{font-weight:normal;font-size:22px;}
+        h1,h3,h4,h5,h6{font-weight: normal;text-align: center;}
+        i{font-style: normal;}
+        .f-left{float:left}
+        .f-right{float:right}
+        .clear{clear:both}
+        /*各自样式*/
+        .product{height:500px;width:100%;}
+        .product .hot-pro{width:1226px;height:500px;margin:0 auto;}
+        .hot-pro h2{padding:40px 0 16px 0;}
+        .hot-pro ul{width:1226px;height:415px;}
+        .hot-pro ul li{width:295px;height:415px;background:#fff;float:left;margin-right:15px;transition:0.2s linear;}
+        .hot-pro ul li.clear-margin-r{margin-right:0;}
+        .hot-pro ul.hot-pro-list li:hover{transform:translate3d(0,-5px,5px);box-shadow:0 10px 5px rgba(0,0,0,0.1);}
+        .hot-pro ul.hot-pro-list li a img{height:222px;width:295px;}
+        .hot-pro ul.hot-pro-list li p{width:242px;padding-left:26px;}
+        .hot-pro ul.hot-pro-list li p.pro-p1{padding-top:35px;}
+        .hot-pro ul.hot-pro-list li p.pro-p2{font-size:10px;color:#b0b0b0;padding:20px 0 10px 26px;}
+        .hot-pro ul.hot-pro-list li p.pro-p3 span{color:#ff8a3b}
+        .hot-pro ul.hot-pro-list li p.pro-p3 i{font-style: normal;color:#e0e0e0;}
+        /*内容*/
+        .pro-content ul.pro-list li{text-align: center;border-top:1px solid #ffac13;position:relative;}
+        .pro-content ul.pro-list li h3{padding:50px 0 25px 0;color:#ffbf49}
+        .pro-content ul.pro-list li h1{font-size:18px;}
+        .pro-content ul.pro-list li h6{color:#b0b0b0;padding:5px 0 5px 0;}
+        .pro-content ul.pro-list li a img{width:190px;height:145px;text-align: center;padding-top:18px;}
+        .pro-content ul.pro-list li .btn-fr{display:inline-block;width:22px;height:48px;background:#d9d9d9;position:absolute
+                                  ;top:184px;line-height:48px;text-align: center;}
+        .pro-content ul.pro-list li .btn-fr span{color:#fff;font-size:16px;}
+        .pro-content ul.pro-list li .btn-f{left:0}
+        .pro-content ul.pro-list li .btn-r{right:0;height: 48px}
+        .pro-content ul.pro-list li a.btn-fr:hover{background:#8d8d8d;}
+        /*圆点按钮*/
+        .btn-circle{height:20px;width:295px;margin-top:15px;}
+        .btn-circle .btn-cir{display:inline-block;height:6px;width:6px;border-radius:50%;background:#b0b0b0;
+            margin-right:15px;}
+        .btn-circle .btn-cir-bg{width:8px;height:8px;background:#fff;border:2px solid#ff6700;line-height:8px;}
+        /*视频部分*/
+        .cont-video{height:350px;width:100%;margin-top:22px;}
+        .cont-video-box{height:350px;width:1226px;margin:0 auto;}
+        .video-title{width:1226px;height:58px;line-height:58px;font-size:22px;}
+        .video-title span:last-child a{font-size:16px;}
+        .video-title span:last-child a i{border-radius:50%;margin-left:10px;font-size:30px;
+            color:#888;margin-top:10px;}
+        .cont-vid1-box{display: flex;width:1226px;}
+        .cont-vid1{flex-grow:1;height:290px;width:300px;margin-right:15px;background:#fff;transition:0.2s linear;}
+        .cont-vid1 img{width:300px;height:180px;}
+        .cont-vid1:hover{transform:translate3d(0,-5px,5px);box-shadow:0 10px 5px rgba(0,0,0,0.1);}
+        .cont-vid1 p{text-align: center}
+        .cont-vid1 .p1{margin-top:30px;}
+        .cont-vid1 .p2{margin-top:10px;font-size:10px;color:#999;}
+        .xm-end{height:265px;width:100%;margin-top:60px;background:#fff;}
+        .end-container{height:265px;width:1226px;margin:0 auto;}
+        .end-top{height:80px;width:1226px;display:flex;}
+        .eng-top-flew{flex-grow:1;height:80px;width:245px;text-align:center;border-bottom:1px solid #e0e0e0;}
+        .eng-top-flew a{display: inline-block;width:245px;height:26px;border-right:1px solid #e0e0e0;font-size:16px;
+            color:#666;text-align:center;margin-top:26px;}
+        .eng-top-flew a:hover{color:#ff6b17;}
+        .eng-top-flew a span{font-size:25px;margin-right:5px;}
+        .end-bottom{height:185px;width:1226px;}
+        .end-bot-left{height:185px;width:960px;display: flex;}
+        .end-bot-right{height:185px;width:264px;}
+        .bot-left-cont{flex-grow:1;height:185px;width:160px;}
+        .bot-left-cont p:first-child{font-size:15px;margin:40px 0 20px 0;}
+        .bot-left-cont p a{font-size:10px;color:#666;}
+        .bot-left-cont p:not(notp){margin-top:15px;}
+        .end-bot-smg{height:115px;width:264px;margin-top:50px;border-left:1px solid #e0e0e0;}
+        .end-bot-smg p{text-align: center;font-size:12px;color:#666;}
+        .end-bot-smg p:nth-child(1){font-size:20px;color:#ff6b00;}
+        .end-bot-smg p:nth-child(2){margin:5px 0 5px 0;}
+        .end-bot-smg p:nth-child(4) a{display: inline-block;width:120px;height:30px;border:1px solid #ff6b00;line-height:30px;
+        margin-top:15px;color:#ff6b00}
+        .end-bot-smg p:nth-child(4) a:hover{color:#fff;background:#ff6b00;}
+        /*网页尾部*/
+        footer{height:165px;width:100%;margin-top:35px;}
+        .footer-cont{height:165px;width:1226px;margin:0 auto;}
+        .footer-left{height:57px;width:100%;}
+        .footer-left-l{height:57px;width:56px;}
+        .footer-left-r{height:57px;width:1170px;}
+        .footer-left-r p a{margin:0  8px;font-size:10px;color:#666;}
+        .footer-left-r p:nth-child(2) a{margin:0 4px;color:#b0b0b0}
+        .footer-left-r p:nth-child(2) a:hover{color:#ff6b00;}
+        .footer-left-r p:not(nop){color:#b0b0b0;font-size:10px;margin-left:10px;}
+        .footer-right{height:28px;width:100%;}
+        .footer-right ul li{float:right;height:28px;width:85px;}
+        .footer-center{text-align: center;height:80px;width:100%;line-height:80px;}
+    </style>
+</head>
+<body>
+    <div class="product">
+       <div class="hot-pro">
+            <h2>热点产品</h2>
+            <ul class="hot-pro-list">
+               <li>
+                   <a href="#"><img src="photo/rpcp3.jpg" alt="图片未显示"/></a>
+                   <p class="pro-p1"><a href="#">外形简洁大方，大爱小米！全家人都在用小米的产品，真心不错，最主要的是性价比高。
+                       附图，给客服妹子一个大...</a></p>
+                   <p class="pro-p2">来自于&nbsp;酸小妞～！&nbsp;的评价</p>
+                   <p class="pro-p3"><a href="#">米家车载空气净化器（U...&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                       <i>|</i>&nbsp;&nbsp;<span>449元</span></a></p>
+               </li>
+                <li>
+                    <a href="#"><img src="photo/rpcp4.jpg" alt="图片未显示"/></a>
+                    <p class="pro-p1"><a href="#">包装很让人感动，式样也很可爱，做出的饭全家人都爱吃，超爱五星！手机控制还是不太熟练，
+                        最主要是没有连接...</a></p>
+                    <p class="pro-p2">来自于&nbsp;HZG&nbsp;的评价</p>
+                    <p class="pro-p3"><a href="#">米家压力IH电饭煲&nbsp;&nbsp;&nbsp;&nbsp;<i>|</i>&nbsp;&nbsp;
+                        <span>999元</span></a></p>
+                </li>
+                <li>
+                    <a href="#"><img src="photo/rpcp2.jpg" alt="图片未显示"/></a>
+                    <p class="pro-p1"><a href="#">超级喜欢！小巧玲珑！音质完美！不知道为什么！只要是小米出的东西我都喜欢！
+                        那倒是因为那一句？？小米为发...</a></p>
+                    <p class="pro-p2">来自于&nbsp;田密&nbsp;的评价</p>
+                    <p class="pro-p3"><a href="#">小米随身蓝牙音箱&nbsp;&nbsp;&nbsp;&nbsp;<i>|</i>&nbsp;&nbsp;
+                        <span>69元</span></a></p>
+                </li>
+               <li class="clear-margin-r">
+                   <a href="#"><img src="photo/rpcp1.jpg" alt="图片未显示"/></a>
+                   <p class="pro-p1"><a href="#"> 东西真心不错，用过最好用的插线板，做工外观没得挑剔，3个USB接口很实用，充电快，
+                       建议不包邮的应该在...</a></p>
+                   <p class="pro-p2">来自于&nbsp;yinyin19891117&nbsp;的评价</p>
+                   <p class="pro-p3"><a href="#">小米插线板&nbsp;&nbsp;&nbsp;&nbsp;<i>|</i>&nbsp;&nbsp;
+                       <span>49元</span></a></p>
+               </li>
+           </ul>
+       </div>
+    </div>
+    <div class="product">
+        <div class="hot-pro pro-content">
+            <h2>内容</h2>
+            <ul class="hot-pro-list pro-list">
+                <li>
+                    <h3>图书</h3>
+                    <h1><a href="#"> 哈利·波特与被诅咒的孩子</a></h1>
+                    <h6>“哈利·波特”第八个故事中文版震撼来</h6>
+                    <h6> 袭！特别彩排版剧本！</h6>
+                    <h4> 29.37元</h4>
+                    <a href="#"><img src="photo/nr1.png" alt="图片未显示"/></a>
+                    <a class="btn-fr btn-f" href="#"><span class="iconfont icon-jiantou1"></span></a>
+                    <a class="btn-fr btn-r" href="#"><span class="iconfont icon-jiantou2"></span></a>
+                    <div class="btn-circle">
+                        <a class="btn-cir btn-cir-bg" href="#"></a>
+                        <a class="btn-cir" href="#"></a>
+                        <a class="btn-cir" href="#"></a>
+                    </div>
+                </li>
+                <li>
+                    <h3>MIUI&nbsp;主题</h3>
+                    <h1><a href="#">熊本熊&nbsp;酷MA萌</a></h1>
+                    <h6>戳一戳、摸一摸，酷MA萌会在锁屏跟</h6>
+                    <h6>你亲密互动哦。</h6>
+                    <h4 style="height:19px;"></h4>
+                    <a href="#"><img src="photo/nr4.jpg" alt="图片未显示"/></a>
+                    <a class="btn-fr btn-f" href="#"><span class="iconfont icon-jiantou1"></span></a>
+                    <a class="btn-fr btn-r" href="#"><span class="iconfont icon-jiantou2"></span></a>
+                    <div class="btn-circle">
+                        <a class="btn-cir btn-cir-bg" href="#"></a>
+                        <a class="btn-cir" href="#"></a>
+                        <a class="btn-cir" href="#"></a>
+                    </div>
+                </li>
+                <li>
+                    <h3>游戏</h3>
+                    <h1><a href="#"> 非人学园</a></h1>
+                    <h6>脑洞大开的二次元竞技手游</h6>
+                    <h6 style="height:26px;"></h6>
+                    <h4 style="height:19px;"></h4>
+                    <a href="#"><img src="photo/nr8.png" alt="图片未显示"/></a>
+                    <a class="btn-fr btn-f" href="#"><span class="iconfont icon-jiantou1"></span></a>
+                    <a class="btn-fr btn-r" href="#"><span class="iconfont icon-jiantou2"></span></a>
+                    <div class="btn-circle">
+                        <a class="btn-cir btn-cir-bg" href="#"></a>
+                        <a class="btn-cir" href="#"></a>
+                        <a class="btn-cir" href="#"></a>
+                    </div>
+                </li>
+                <li class="clear-margin-r">
+                    <h3>应用</h3>
+                    <h1><a href="#">2017金米奖</a></h1>
+                    <h6>“哈利·波特”第八个故事中文版震撼来</h6>
+                    <h6 style="height:26px;"></h6>
+                    <h4 style="height:19px;"></h4>
+                    <a href="#"><img src="photo/nr11.png" alt="图片未显示"/></a>
+                    <a class="btn-fr btn-f" href="#"><span class="iconfont icon-jiantou1"></span></a>
+                    <a class="btn-fr btn-r" href="#"><span class="iconfont icon-jiantou2"></span></a>
+                    <div class="btn-circle">
+                        <a class="btn-cir btn-cir-bg" href="#"></a>
+                        <a class="btn-cir" href="#"></a>
+                        <a class="btn-cir" href="#"></a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="cont-video">
+        <div class="cont-video-box">
+            <div class="video-title">
+                <span class="f-left">视频</span>
+                <span class="f-right"><a href="#">查看全部<i class="iconfont icon-jiantou-copy-copy-copy"></i></a></span>
+            </div>
+            <div class="cont-vid1-box">
+                <div class="cont-vid1">
+                    <a href="#"><img src="photo/vedio1.jpg" alt=""/></a>
+                    <p class="p1"><a href="#">一团火</a></p>
+                    <p class="p2">小米创业8年内部纪录片（手机篇）</p>
+                </div>
+                <div class="cont-vid1">
+                    <a href="#"><img src="photo/Video2.jpg" alt=""/></a>
+                    <p class="p1"><a href="#">小米8，一部与众不同的手机</a></p>
+                    <p class="p2">透明探索版，将科技与美学完美结合</p>
+                </div>
+                <div class="cont-vid1">
+                    <a href="#"><img src="photo/video3.jpg" alt=""/></a>
+                    <p class="p1"><a href="#">小米MIX 2S，一面科技 一面艺术</a></p>
+                    <p class="p2">艺术品般陶瓷机身，惊艳、璀璨</p>
+                </div>
+                <div class="cont-vid1" style="margin-right:0;">
+                    <a href="#"><img src="photo/video4.jpg" alt=""/></a>
+                    <p class="p1"><a href="#">生活中无所不在的小爱同学</a></p>
+                    <p class="p2">一句话搞定手机复杂操作</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="xm-end">
+        <div class="end-container">
+            <div class="end-top">
+                <div class="eng-top-flew"><a href="#"><span class="iconfont icon-buoumaotubiao46"></span>预约维修服务</a></div>
+                <div class="eng-top-flew"><a href="#"><span class="iconfont icon-7tian"></span>7天无理由退货</a></div>
+                <div class="eng-top-flew"><a href="#"><span class="iconfont icon-15tianwuliyoutuihuo"></span>15天免费换货</a></div>
+                <div class="eng-top-flew"><a href="#"><span class="iconfont icon-liwu"></span>满150元包邮</a></div>
+                <div class="eng-top-flew"><a href="#"><span class="iconfont icon-dizhi"></span>520余家售后网点</a></div>
+            </div>
+            <div class="end-bottom">
+                <div class="end-bot-left f-left">
+                    <div class="bot-left-cont">
+                        <p class="notp">帮助中心</p>
+                        <p><a href="#">账户管理</a></p>
+                        <p><a href="#">购物指南</a></p>
+                        <p><a href="#"> 订单操作</a></p>
+                    </div>
+                    <div class="bot-left-cont">
+                        <p class="notp">服务支持</p>
+                        <p><a href="#">售后政策</a></p>
+                        <p><a href="#">自助服务</a></p>
+                        <p><a href="#">相关下载</a></p>
+                    </div>
+                    <div class="bot-left-cont">
+                        <p class="notp">线下门店</p>
+                        <p><a href="#">小米之家</a></p>
+                        <p><a href="#">购物指南</a></p>
+                        <p><a href="#">授权体验店</a></p>
+                    </div>
+                    <div class="bot-left-cont">
+                        <p class="notp">关于小米</p>
+                        <p><a href="#">了解小米</a></p>
+                        <p><a href="#">加入小米</a></p>
+                        <p><a href="#">投资者关系</a></p>
+                    </div>
+                    <div class="bot-left-cont">
+                        <p class="notp">关注我们</p>
+                        <p><a href="#">新浪微博</a></p>
+                        <p><a href="#">官方微信</a></p>
+                        <p><a href="#">联系我们</a></p>
+                    </div>
+                    <div class="bot-left-cont">
+                        <p class="notp">特色服务</p>
+                        <p><a href="#">F 码通道</a></p>
+                        <p><a href="#">礼物码</a></p>
+                        <p><a href="#">防伪查询</a></p>
+                    </div>
+                </div>
+                <div class="end-bot-right f-right">
+                    <div class="end-bot-smg">
+                        <p>400-100-5678</p>
+                        <p>周一至周日 8:00-18:00</p>
+                        <p>（仅收市话费）</p>
+                        <p><a href="#"><i class="iconfont icon-jiantou2"></i>联系客户</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-cont">
+            <div class="footer-left">
+                <div class="footer-left-l f-left"><img src="photo/logo-footer.png" alt=""/></div>
+                <div class="footer-left-r f-left">
+                    <p class="nop">
+                        <a style="margin-left:0" href="#">小米商城</a>|
+                        <a href="#">MIUI</a>|
+                        <a href="#">米家</a>|
+                        <a href="#">米聊</a>|
+                        <a href="#">多看</a>|
+                        <a href="#">游戏</a>|
+                        <a href="#">路由器</a>|
+                        <a href="#">米粉卡</a>|
+                        <a href="#">政企服务</a>|
+                        <a href="#">小米天猫店</a>|
+                        <a href="#">隐私政策</a>|
+                        <a href="#">问题反馈</a>|
+                        <a href="#">廉正举报</a>|
+                        <a href="#">Select Region</a>
+                    </p>
+                    <p>&copy;<a href="#">mi.com</a>京ICP证110507号<a href="#">京ICP备10046444号</a>
+                        <a href="#">京公网安备11010802020134号</a><a href="#">京网文[2017]1530-131号</a>
+                        <a href="#">营业执照</a></p>
+                    <p>违法和不良信息举报电话：185-0130-1238，本网站所列数据，除特殊说明，所有数据均出自我司实验室测试</p>
+                </div>
+            </div>
+            <div class="footer-right">
+                <ul class="footer-list">
+                    <li><a href="#"><img src="photo/v-logo-5.png" alt=""/></a></li>
+                    <li><a href="#"><img src="photo/v-logo-3.png" alt=""/></a></li>
+                    <li><a href="#"><img src="photo/v-logo-1.png" alt=""/></a></li>
+                    <li><a href="#"><img src="photo/v-logo-2.png" alt=""/></a></li>
+                    <li><a href="#"><img style="height:28px;width:85px;" src="photo/v-logo-4.png" alt=""/></a></li>
+                </ul>
+            </div>
+            <div class="footer-center">
+                <img src="photo/slogan2016.png" alt="图片未显示"/>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
