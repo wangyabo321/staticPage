@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta  charset="UTF-8">
+
+    <title>账户登录</title>
+
+    <script src="jquery-1.8.1.min.js" type="text/javascript"></script>
+    <script src="website.account.login.js" type="text/javascript"></script>
+
+    <link media="all" href="index.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+<input id="returnUrl" value="/" type="hidden">
+
+<div class="header">
+    <div class="area">
+        <a href="http://pospal.cn/" target="_top"><img class="logo" src="logo.login.png" alt="PosPal 银豹收银系统" title=""></a>
+        <div class="greeting">欢迎登录</div>
+        <div class="menu">
+            客服热线：400-000-7749，0592-3135666&nbsp;&nbsp;
+            <a href="tencent://message/?uin=800008626">企业QQ：800008626</a>&nbsp;&nbsp;
+            <a href="http://pospal.cn/downcenter.html" target="_top">下载中心</a>&nbsp;&nbsp;
+            <a href="http://pospal.cn/help.html" target="_top">帮助中心</a>
+        </div>
+    </div>
+</div>
+
+<div id="showcaseBox">
+    <div class="loginbox">
+        <h1>账号登录</h1>
+        <div class="item userName">
+            <label for="username"></label>
+            <input id="txt_userName" class="empty" value="请输入账号" maxlength="32" tabindex="1" autocomplete="off" type="text">
+        </div>
+        <div class="item passWord">
+            <label for="username"></label>
+            <input id="txt_password" class="empty" value="请输入密码" maxlength="32" tabindex="2" autocomplete="off" type="text">
+        </div>
+        <div id="longinSubmit" class="submit">登 录</div>
+        <div class="forget"><a href="https://user.pospal.cn/Account/ForgetPassword" target="_self">忘记密码？</a></div>
+        <div class="registbox">
+            <span>没有账号？</span>
+            <a href="https://user.pospal.cn/account/register" target="_self">免费注册</a>
+        </div>
+        <div class="tips accounttips">
+            <b>!</b>
+            <span>请输入账号，没有账号？<a href="https://user.pospal.cn/account/register" target="_parent">免费注册</a></span>
+            <div class="triangle"></div>
+        </div>
+        <div class="tips posswordtips">
+            <b>!</b>
+            <span>请输入密码，忘记密码？<a href="https://user.pospal.cn/Account/ForgetPassword" target="_parent">找回密码</a></span>
+            <div class="triangle"></div>
+        </div>
+        <div class="tips errortips">
+            <b>!</b>
+            <span></span>
+            <div class="triangle"></div>
+        </div>
+    </div>
+    <div class="showcase">
+        <div id="iframeDiv">
+            <iframe src="index_1.html" style="width: 100%; border: medium none; height: 560px;" scrolling="no"></iframe>
+        </div>
+    </div>
+</div>
+
+<div class="bottom">
+    <div class="area info">
+        <p>
+            <a href="http://pospal.cn/version_touch.html" target="_top">版本更新</a>
+            &nbsp;|&nbsp;&nbsp;
+            <a href="http://wiki.pospal.cn/" target="_top">支持社区</a>
+            &nbsp;|&nbsp;
+            <a href="http://share.pospal.cn/" target="_top">银豹博客</a>
+            &nbsp;|&nbsp;
+            <a href="http://pospal.cn/partner.html" target="_top">渠道合作</a>
+            &nbsp;|&nbsp;
+            <a href="http://pospal.cn/openplatform/openplatform.html" target="_top">开放平台</a>
+            &nbsp;|&nbsp;
+            <a href="http://pospal.cn/company.html" target="_top">关于我们</a>
+            &nbsp;|&nbsp;
+            <a href="http://pospal.cn/contactus.html" target="_top">联系我们</a>
+        </p>
+        <p>2010-2017 © Copyright. Zhundong Network - All Rights Reserved.</p>
+    </div>
+</div>
+
+<div class="windowshadow" style="z-index: 99990;"></div>
+
+<div id="wxLoginDiv" class="popup" style="z-index: 99991; width: 360px; height: 240px; margin-top: -120px; margin-left: -180px; display: none;">
+    <div class="popupTitle bg">
+        <h1>● 微信扫描登录</h1>
+    </div>
+    <div class="popupArea">
+        <div id="wxLoginQrcodeDiv" class="popupAreaCente" style="text-align: center;">
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>

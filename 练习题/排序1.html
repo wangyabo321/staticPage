@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>从小到大排序：方法一</title>
+    <script type="text/javascript">
+        /*
+         编写程序，有键盘输入三个整数分别存入变量 num1，num2，num3。对他们进行排序，并且从小到大输出
+         */
+        var num1 = parseInt(prompt("请输入数字num1"));
+        var num2 = parseInt(prompt("请输入数字num2"));
+        var num3 = parseInt(prompt("请输入数字num3"));
+        if(num1>num2){
+            if(num2>num3){
+                document.write("三个整数从小到大输出顺序："+num3+"-"+num2+"-"+num1);
+            }
+            else if(num1<num3){
+                document.write("三个整数从小到大输出顺序："+num2+"-"+num1+"-"+num3);
+            }
+            else{
+                document.write("三个整数从小到大输出顺序："+num2+"-"+num3+"-"+num1);
+            }
+        }
+        else {
+            if(num2<num3){
+                document.write("三个整数从小到大输出顺序："+num1+"-"+num2+"-"+num3);
+            }
+            else if(num1<num3){
+                document.write("三个整数从小到大输出顺序："+num1+"-"+num3+"-"+num2);
+            }
+            else{
+                document.write("三个整数从小到大输出顺序："+num3+"-"+num1+"-"+num2);
+            }
+        }
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

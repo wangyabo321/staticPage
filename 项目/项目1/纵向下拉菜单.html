@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>纵向下拉菜单</title>
+    <link rel="stylesheet" href=""/>
+    <script src="../../JQuery/jquery-3.3.1.min.js"></script>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        #mu_xl{
+            height:50px;
+            width:auto;
+            margin-top:50px;
+            background:#cd0071;
+        }
+        #mu_xl .cont{
+            height:50px;
+            width:1000px;
+            margin: 0 auto;
+        }
+        #mu_xl .cont .cont_1{
+            width: 715px;
+            height:50px;
+            float:left;
+        }
+        #mu_xl .cont .cont_1 ul.cont_ul li{
+            list-style:none;
+            float:left;
+            width:130px;
+            line-height: 50px;
+            text-align: center;
+            position: relative;
+            }
+        #mu_xl .cont .cont_1 ul.cont_ul li a,#mu_xl .cont .cont_2 a{
+            font-family: '微软雅黑', 'Times New Roman', Times, serif;
+            font-size:12px;
+            color:white;
+            text-decoration:none;
+        }
+        #mu_xl .cont .cont_2{
+            width:240px;
+            height:50px;
+            float:right;
+        }
+        #mu_xl .cont .cont_2 a{
+            display:inline-block;
+            float:left;
+            width:45px;
+            line-height:50px;
+        }
+        #mu_xl .cont_ul .menu{
+            width:300px;
+            border:2px solid #e10076;
+            border-top:none;
+            position:absolute;
+            top:50px;
+            left:0;
+            background:rgba(255,255,255,0.8);
+            display: none;
+            padding:10px;
+            z-index: 2;
+        }
+        #mu_xl .cont .cont_1 ul.cont_ul li.hover{
+            background: #b80064;
+        }
+        #mu_xl .cont .cont_1 ul.cont_ul li .menu p{
+            text-align: left;
+            font-family: '微软雅黑', 'Times New Roman', Times, serif;
+            line-height:30px;
+            border-bottom:1px dotted #333;
+
+        }
+        #mu_xl .cont .cont_1 ul.cont_ul li .menu p span{
+            font-weight: bold;
+            font-size:8px;
+        }
+        #mu_xl .cont .cont_1 ul.cont_ul li .menu p a{
+            color:#666;
+            font-size:8px;
+        }
+        #mu_xl .cont .cont_1 ul.cont_ul li .menu p a:hover{
+            color:#b80064;
+        }
+        /*背景轮播器*/
+        #bg{
+            width:100%;
+            height:430px;
+            position:relative;
+        }
+        #bg .bg1{
+            width:100%;
+            height: 430px;
+            position: absolute;
+            top:0;
+            left:0;
+        }
+        #bg ul.bg_btn{
+            height:15px;
+            display: inline-block;/*行内块级元素，根据元素大小，改变盒子大小。具有自适应。*/
+            position: absolute;
+            left:50%;
+            bottom:45px;
+        }
+        #bg ul.bg_btn li{
+            list-style: none;
+            width: 10px;
+            height:10px;
+            border:2px solid white;
+            border-radius:50%;
+            background: #298dff;
+            float:left;
+            margin:5px;
+
+        }
+       #bg .bg_btn .hover_btn{
+           background:#fad975;
+
+        }
+    </style>
+</head>
+<body>
+    <!--下拉菜单-->
+    <div id="mu_xl">
+        <div class="cont">
+            <div class="cont_1">
+                <ul class="cont_ul">
+                    <li class="hover">
+                        <a href="#">出国跟团游</a>
+                        <div class="menu">
+                            <p>
+                                <span>台湾港澳：</span>
+                                <a href="#">台湾</a> | <a href="#">香港</a> |
+                                <a href="#">澳门</a> </p>
+                            <p>
+                                <span>东南亚：</span>
+                                <a href="#">泰国</a> | <a href="#">新加坡</a> |
+                                <a href="#">马来西亚</a> | <a href="#">越南</a> |
+                                <a href="#">柬埔寨</a> | <a href="#">印度</a> |
+                                <a href="#">尼泊尔</a> | <a href="#">老郭</a>
+                            </p>
+                            <p>
+                                <span>美洲：</span>
+                                <a href="#">美国</a> | <a href="#">加拿大</a> |
+                                <a href="#">墨西哥</a> | <a href="#">巴西</a> |
+                                <a href="#">阿根廷</a>
+                            </p>
+                            <p>
+                                <span>大洋洲：</span>
+                                <a href="#">澳大利亚</a> | <a href="#">新西兰</a> |
+                                <a href="#">斐济</a>
+                            </p>
+                            <p>
+                                <span>中东非洲：</span>
+                                <a href="#">迪拜</a> | <a href="#">南非</a> |
+                                <a href="#">土耳其</a>| <a href="#">以色列</a>
+                            </p>
+                        </div>
+                    </li>
+
+                    <li>
+                        <a href="#">出境自由游</a>
+                        <div class="menu">
+                            <p>
+                                <span>美洲：</span>
+                                <a href="#">美国</a> | <a href="#">加拿大</a> |
+                                <a href="#">墨西哥</a> | <a href="#">巴西</a> |
+                                <a href="#">阿根廷</a>
+                            </p>
+                            <p>
+                                <span>大洋洲：</span>
+                                <a href="#">澳大利亚</a> | <a href="#">新西兰</a> |
+                                <a href="#">斐济</a>
+                            </p>
+                            <p>
+                                <span>中东非洲：</span>
+                                <a href="#">迪拜</a> | <a href="#">南非</a> |
+                                <a href="#">土耳其</a>| <a href="#">以色列</a>
+                            </p>
+                        </div>
+                    </li>
+
+                    <li>
+                        <a href="#">国内跟团游</a>
+                        <div class="menu">
+                            <p>
+                                <span>美洲：</span>
+                                <a href="#">美国</a> | <a href="#">加拿大</a> |
+                                <a href="#">墨西哥</a> | <a href="#">巴西</a> |
+                                <a href="#">阿根廷</a>
+                            </p>
+                            <p>
+                                <span>大洋洲：</span>
+                                <a href="#">澳大利亚</a> | <a href="#">新西兰</a> |
+                                <a href="#">斐济</a>
+                            </p>
+                            <p>
+                                <span>中东非洲：</span>
+                                <a href="#">迪拜</a> | <a href="#">南非</a> |
+                                <a href="#">土耳其</a> | <a href="#">以色列</a>
+                            </p>
+                        </div>
+                    </li>
+
+                    <li>
+                        <a href="#">国内自由游</a>
+                        <div class="menu">
+                            <p>
+                                <span>美洲：</span>
+                                <a href="#">美国</a> | <a href="#">加拿大</a> |
+                                <a href="#">墨西哥</a> | <a href="#">巴西</a> |
+                                <a href="#">阿根廷</a>
+                            </p>
+                            <p>
+                                <span>大洋洲：</span>
+                                <a href="#">澳大利亚</a> | <a href="#">新西兰</a> |
+                                <a href="#">斐济</a>
+                            </p>
+                            <p>
+                                <span>中东非洲：</span>
+                                <a href="#">迪拜</a> | <a href="#">南非</a> |
+                                <a href="#">土耳其</a> | <a href="#">以色列</a>
+                            </p>
+                        </div>
+                    </li>
+
+                    <li>
+                        <a href="#">海南周边游</a>
+                        <div class="menu">
+                            <p>
+                                <span>美洲：</span>
+                                <a href="#">美国</a> | <a href="#">加拿大</a> |
+                                <a href="#">墨西哥</a> | <a href="#">巴西</a> |
+                                <a href="#">阿根廷</a>
+                            </p>
+                            <p>
+                                <span>大洋洲：</span>
+                                <a href="#">澳大利亚</a> | <a href="#">新西兰</a> |
+                                <a href="#">斐济</a>
+                            </p>
+                            <p>
+                                <span>中东非洲：</span>
+                                <a href="#">迪拜</a> | <a href="#">南非</a> |
+                                <a href="#">土耳其</a> | <a href="#">以色列</a>
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="cont_2">
+                <a href="#">泰国</a>
+                <a href="#">台湾</a>
+                <a href="#">蒙古</a>
+            </div>
+        </div>
+    </div>
+
+    <!--背景轮播图-->
+    <div id="bg">
+       <div class="bg1" style="background:url('img/旅游攻略1.jpg') right"></div>
+       <div class="bg1" style="background:url('img/旅游攻略2.jpg') right"></div>
+       <div class="bg1" style="background:url('img/旅游攻略3.jpg') right"></div>
+       <div class="bg1" style="background:url('img/旅游攻略4.jpg') right"></div>
+       <div class="bg1" style="background:url('img/旅游攻略5.jpg') right"></div>
+       <div class="bg1" style="background:url('img/旅游攻略6.jpg') right"></div>
+        <ul class="bg_btn">
+            <li class="hover_btn"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+     </div>
+
+    <script type="text/javascript">
+
+        $(function(){
+            //1,二级菜单开始
+            $('#mu_xl .cont .cont_1 ul.cont_ul li').hover(function(){
+                $(this).addClass('hover');
+                $(this).find('.menu').show();
+            },function(){
+                //$(this).css('background','#cd0071');
+                $(this).removeClass('hover');
+                $(this).find('.menu').hide();
+            });
+
+            //2,背景轮播图开始
+            var index1 = 0;
+            var timePlay = null;
+            $('#bg .bg1').eq(index1).show().siblings('div').hide();
+            $(' #bg .bg_btn li').hover(function(){
+                //鼠标滑动上面，所要执行的效果。
+                clearInterval(timePlay);//清楚定时播放器
+                index1 = $(this).index();
+                //show()显示 fadeIn()淡入； hide()隐藏 fadeout()淡出。
+                $('#bg .bg1').eq(index1).fadeIn().siblings('div').fadeOut();
+                $(this).addClass('hover_btn').siblings().removeClass('hover_btn');
+            },function(){
+                //鼠标移开，所要执行的效果。
+                autoPlay();//调用播放器。
+            });
+
+            //3,背景轮播图自动轮播
+            function autoPlay(){
+                timePlay = setInterval(function(){
+                    index1++;
+                    if(index1<=5){
+                        $('#bg .bg1').eq(index1).fadeIn().siblings('div').fadeOut();
+                        $(' #bg .bg_btn li').eq(index1).addClass('hover_btn').siblings().removeClass('hover_btn');
+                        if(index1==5){index1=-1;}
+                    }else{index1=-1;}
+                },2000);
+            }
+            autoPlay();
+        });
+    </script>
+</body>
+</html>

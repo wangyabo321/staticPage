@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>bootstrap_表单</title>
+    <link rel="stylesheet" href="../Bootstrap/css/bootstrap.min.css"/>
+</head>
+<body>
+ <div class="container">
+     <!--内联表单-->
+     <form class="form-inline" action="">
+          <!--基本表单-->
+         <div class="form-group">
+             <label for="email">Email address:</label>
+             <input class="form-control" id="email" type="email" placeholder="请输入Email"/>
+         </div>
+
+         <div class="form-group">
+             <label for="password">密码：</label>
+             <input class="form-control" id="password" type="password" placeholder="请输入密码" />
+         </div>
+
+         <div class="form-group">
+             <label for="file">File input</label>
+             <input class="form-container" id="file" type="file"/>
+             <p class="help-block">Example block-level help text here.</p>
+         </div>
+
+         <div class="checkbox">
+             <label for="checkbox">
+                 <input id="checkbox" type="checkbox"/>多选框
+             </label>
+         </div>
+         <button class="btn btn-default" type="button">Submit</button>
+             <!--内联表单-->
+         <div class="form-group">
+             <label for="Amount">Amount:</label>
+             <div class="input-group">
+                 <div class="input-group-addon">$</div>
+                 <input class="form-group" id="Amount" type="text" placeholder="Amount"/>
+                 <div class="input-group-addon">.00</div>
+             </div>
+         </div>
+         <button class="btn btn-primary">Transfer cash</button>
+     </form>
+     <!--水平排列的表单-->
+     <form class="form-horizontal" action="">
+
+         <div class="form-group">
+             <label class="col-sm-3 control-label" for="Email">Email:</label>
+             <div class="col-sm-9">
+                 <input class="form-control" id="Email" type="email" placeholder="Email"/>
+             </div>
+         </div>
+
+         <div class="form-group">
+             <label class="col-sm-3 control-label" for="pass">password:</label>
+             <div class="col-sm-9">
+                 <input class="form-control" id="pass" type="password" placeholder="Password"/>
+             </div>
+         </div>
+
+         <div class="form-group">
+             <div class="col-sm-offset-3 col-sm-9">
+                 <div class="checkbox">
+                     <label for="">
+                         <input type="checkbox"/>Remember me
+                     </label>
+                 </div>
+             </div>
+         </div>
+
+         <div class="form-group">
+             <div class="col-sm-offset-3 col-sm-9">
+                 <button class="btn btn-primary" type="submit">Sign in</button>
+             </div>
+         </div>
+     </form>
+     <!--输入框-->
+     <input class="form-control" type="text" placeholder="Text input"/>
+     <!--文本域 支持多行文本的表单控件。可根据需要改变 rows 属性-->
+     <textarea class="form-control" rows="3"></textarea>
+     <!--多选和单选框-->
+
+ </div>
+</body>
+</html>

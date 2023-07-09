@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>设置文本的溢出效果</title>
+    <style>
+        #yc1{
+            text-overflow:clip;
+            overflow: hidden;
+            white-space: nowrap;
+            width: 200px;
+            background: #ccc;
+            word-spacing:normal;
+            letter-spacing:15px;
+        }
+       p{
+           line-height: 100px;
+         }
+        #yc2{
+            text-overflow:ellipsis;
+            overflow: hidden;
+            white-space:nowrap;
+            width: 200px;
+            background:#ccc;
+        letter-spacing:normal;
+        }
+    </style>
+</head>
+<body>
+<h2>text-overflow</h2>
+<div id="yc1">
+    <p >不显示省略号，而是简单的裁剪条</p>
+</div>
+<h2>text-overflow</h2>
+<div id="yc2">
+显示省略号，不是简单的裁剪条
+</div>
+</body>
+</html>

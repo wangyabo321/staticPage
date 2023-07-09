@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>css旋转3D信息简介</title>
+    <style>
+        *{margin:0;padding:0}
+        .container{height:208px;width:1300px;margin:50px auto;text-align:center;
+            display:flex;justify-content:space-between;(水平方向的居中)/*align-items:center;(垂直方向的居中)*/}
+        .container .img-list{height:208px;width:368px;justify-content:space-between;
+            perspective:1000px;}
+        .pic{height:208px;width:368px;}
+        .img-list .img-pic{position: absolute;transform:rotateY(0deg);transition:0.3s;}
+        .img-list .img-text{position: absolute;transform:rotateY(90deg);transition:0.3s;}
+        .container .img-list:hover .img-pic{transform:rotateY(90deg);}
+        .container .img-list:hover .img-text{transform:rotateY(0deg);}
+    </style>
+</head>
+<body>
+    <div class="container">
+      <div class="img-list">
+          <div class="pic img-pic"><img src="img/icon_6.jpg" alt="图片未显示"/></div>
+          <div class="pic img-text"><img src="img/icon_1.jpg" alt="图片未显示"/></div>
+      </div>
+      <div class="img-list">
+          <div class="pic img-pic"><img src="img/icon_2.jpg" alt="图片未显示"/></div>
+          <div class="pic img-text"><img src="img/icon_3.jpg" alt="图片未显示"/></div>
+      </div>
+      <div class="img-list">
+          <div class="pic img-pic"><img src="img/icon_4.jpg" alt="图片未显示"/></div>
+          <div class="pic img-text"><img src="img/icon_5.jpg" alt="图片未显示"/></div>
+      </div>
+
+    </div>
+</body>
+</html>

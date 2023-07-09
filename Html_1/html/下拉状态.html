@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        *{margin:0px;padding:0px}
+        .div_1 ul{list-style: none;float:right;margin:20px}
+        .div_1 ul li{width: 60px;height: 25px;background-color: #3388ff;text-align: center;line-height: 25px}
+        .div_1 ul li a{display:inline-block;font-size: 13px;color: white;text-decoration:none;}
+
+         ul{position:relative}
+        .div_2{height:250px;width: 60px;background-color: #f9f9f9;position:absolute;top: 25px;left:0px;display: none}
+        .div_2 span{display: inline-block;padding-top:10px }
+        .div_1 .div_2 span a{display:inline-block;font-size: 18px;color: black;}
+         li:hover .div_2{ display: inline-block;}
+        .div_1 .div_2 span a:hover{text-decoration: underline}
+    </style>
+</head>
+<body>
+<div class="div_1">
+    <ul>
+        <li>
+            <a href="#">更多产品</a>
+            <div class="div_2">
+               <span><a href="#">糯米</a></span>
+               <span><a href="#">音乐</a></span>
+               <span><a href="#">图片</a></span>
+               <span><a href="#">知道</a></span>
+               <span><a href="#">文库</a></span>
+               <span><a href="#">风云榜</a></span>
+            </div>
+        </li>
+
+    </ul>
+</div>
+</body>
+</html>

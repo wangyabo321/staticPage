@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>footer部分</title>
+    <style>
+        *{margin:0px;padding:0px;}
+        a{text-decoration:none;color:#333;}
+        ul li{list-style:none}
+        .footer{border:1px solid red;width:100%;height:1000px;margin-top:100px;}
+        .footer-content{width:1200px;height:500px;margin:0 auto;}
+        .footer-one{display:flex;border-bottom:1px solid #dadada;}
+        .footer-one-guide{flex-grow:1;width:300px;height:80px;font-size:18px;}
+        .footer-one-guide span{display:inline-block;width:40px;height:40px;background:url(imags/icon-header.png) no-repeat -358px -207px;}
+        .footer-one-guide span{margin-top:20px;}
+        .footer-one-guide a.a-float{
+            position:absolute;
+            margin-top:28px;
+            margin-left:15px;
+        }
+        .one-guide-two span{
+            background-position:-398px -207px;
+        }
+        .one-guide-three span{
+            background-position:-438px -207px;
+        }
+        .one-guide-four span{
+            background-position:-478px -207px;
+        }
+        /*中间部分*/
+        .footer-two{height:210px;border-bottom: 1px solid #d3d3d3;}
+        .footer-two-left{height:210px;width:900px;float:left;}
+        .footer-two-left ul.footer-two-list li{
+            float:left;
+            width:150px;
+            height:210px;
+        }
+        .footer-two-right{height:210px;width:300px;float:right;}
+        .footer-two ul.footer-two-list li h3{
+            font-size:14px;
+            font-weight:normal;
+            margin-top:25px;
+        }
+        .footer-two ul.footer-two-list li p{
+            font-size:10px;
+            margin-top:5px;
+        }
+        .footer-right-service{width:300px;height:165px;margin-top:22px;border-left:1px solid #dadada;text-align: center}
+        .footer-right-service h2{font-size:20px;color:#cb242b;margin-top:28px;}
+        .footer-right-service p{font-size:14px;margin-top:8px;}
+        .footer-right-service a.server-on{display:inline-block;width:170px;height:30px;border:1px solid #cb242b;
+            border-radius:8px;font-size:14px;line-height:30px;color:#cb242b;margin-top:10px;}
+        .footer-right-service a.server-on span.service-on-icon{
+            display: inline-block;
+            width:20px;
+            height:20px;
+            margin-top:5px;
+            margin-right:10px;
+            background:url(imags/icon-header.png) no-repeat -334px -210px;
+        }
+        .mall{
+            margin-top:25px;
+            font-size:14px;
+        }
+        .mall a{
+            display:inline-block;
+            width:21px;
+            height:20px;
+            margin-right:10px;
+            background:url(imags/icon-header.png) no-repeat -357px -173px;
+        }
+        .mall a:nth-child(3){
+             background-position:-404px -173px;
+         }
+        .mall a:nth-child(4){
+            background-position:-453px -173px;
+        }
+        .mall a:nth-child(5){
+            background-position:-500px -173px;
+        }
+        .mall a:nth-child(2):hover{
+            background-position:-333px -173px;
+        }
+        .mall-weixin{
+            display:none;
+            width:120px;
+            height:120px;
+            background:#fff;
+            position: absolute;
+            border:1px solid #d3d3d3;
+            top:27px;
+            left:-40px;
+        }
+        .mall-weixin img{
+            width:110px;
+            height:110px;
+            padding-top:5px;
+        }
+        .mall a.mall-wx{
+            position: relative;
+        }
+        .mall a.mall-wx:hover .mall-weixin{
+            display: block;
+        }
+        .mall a:nth-child(3):hover{
+            background-position:-380px -173px;
+        }
+        .mall a:nth-child(4):hover{
+            background-position:-429px -173px;
+        }
+        .mall a:nth-child(5):hover{
+            background-position:-476px -173px;
+        }
+        /*footer底部*/
+        .footer-three{
+            height:100px;
+            margin-top:25px;
+        }
+        .end-footer-left{
+            width:100px;
+            height:100px;
+            float: left;
+        }
+        .end-footer-middle{
+            width:940px;
+            height:100px;
+            float: left;
+        }
+        .end-footer-right{
+            width:160px;
+            height:100px;
+            float: right;
+        }
+        .end-footer-middle p{font-size:12px;color:#a4a4a4;margin-top:3px;}
+        .end-footer-middle p.middle-p-one{
+            margin-top:0px;
+        }
+        .end-footer-middle p a{color:#a4a4a4;}
+        .end-footer-middle p a:hover{color:#900;}
+        .end-footer-right a.end-a1-img{float:left;}
+        .end-footer-right a.end-a2-img{float:right;}
+        .end-footer-right a.end-a2-img img{width:70px;height:25px;border:1px solid #d4d4d4}
+        .end-footer-right a.end-a1-img img{border:1px solid #d4d4d4}
+    </style>
+</head>
+<body>
+    <div class="footer">
+        <div class="footer-content">
+            <!--footer上部分-->
+            <div class="footer-one">
+                <div class="footer-one-guide one-guide-one">
+                    <a href="#"><span></span></a>
+                    <a class="a-float" href="#">百强企业&nbsp;品质保证</a>
+                </div>
+                <div class="footer-one-guide one-guide-two">
+                    <a href="#"><span></span></a>
+                    <a class="a-float" href="#">7天退货&nbsp;15天换货</a>
+                </div>
+                <div class="footer-one-guide one-guide-three">
+                    <a href="#"><span></span></a>
+                    <a class="a-float" href="#">48元起免运费</a>
+                </div>
+                <div class="footer-one-guide one-guide-four">
+                    <a href="#"><span></span></a>
+                    <a class="a-float" href="#">1000家维修网点&nbsp;全国联保</a>
+                </div>
+            </div>
+            <!--footer中部分-->
+            <div class="footer-two">
+                <div class="footer-two-left">
+                    <ul class="footer-two-list">
+                        <li>
+                            <h3>购物相关</h3>
+                            <p><a href="#">购物指南</a></p>
+                            <p><a href="#">配送方式</a></p>
+                            <p><a href="#">支付方式</a></p>
+                            <p><a href="#">常见问题</a></p>
+                        </li>
+                        <li>
+                            <h3>保修与退换货</h3>
+                            <p><a href="#">保修政策</a></p>
+                            <p><a href="#">退换货政策</a></p>
+                            <p><a href="#">退换货流程</a></p>
+                            <p><a href="#">保修状态查询</a></p>
+                            <p><a href="#">配件防伪查询</a></p>
+                        </li>
+                        <li>
+                            <h3>维修与技术支持</h3>
+                            <p><a href="#">售后网点</a></p>
+                            <p><a href="#">预约维修</a></p>
+                            <p><a href="#">手机寄修</a></p>
+                            <p><a href="#">备件价格查询</a></p>
+                            <p><a href="#">上门服务</a></p>
+                        </li>
+                        <li>
+                            <h3>特色服务</h3>
+                            <p><a href="#">防伪查询</a></p>
+                            <p><a href="#">补购保障</a></p>
+                            <p><a href="#">以旧换新</a></p>
+                            <p><a href="#">礼品包装</a></p>
+                        </li>
+                        <li>
+                            <h3>关于我们</h3>
+                            <p><a href="#">公司介绍</a></p>
+                            <p><a href="#">华为商城简介</a></p>
+                            <p><a href="#">华为线下门店</a></p>
+                            <p><a href="#">荣耀线下门店</a></p>
+                            <p><a href="#">诚征英才</a></p>
+                            <p><a href="#">意见反馈</a></p>
+                        </li>
+                        <li>
+                            <h3>友情链接</h3>
+                            <p><a href="#">华为集团</a></p>
+                            <p><a href="#">华为CBG官网</a></p>
+                            <p><a href="#">荣耀官网</a></p>
+                            <p><a href="#">花粉俱乐部</a></p>
+                            <p><a href="#">网站地图</a></p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-two-right">
+                    <div class="footer-right-service">
+                        <h2>400-088-6888</h2>
+                        <p>7x24小时客服热线（仅收市话费）</p>
+                        <a class="server-on" href="#3"><span class="service-on-icon"></span><span style="vertical-align:top">在线客服</span></a>
+                        <div class="mall">
+                            <span style="vertical-align:top">关注Vmall&nbsp;:&nbsp;&nbsp;</span>
+                            <a class="mall-wx" href="#4">
+                                <div class="mall-weixin">
+                                    <img src="imags/wx.jpg" alt=""/>
+                                </div>
+                            </a>
+                            <a href="#2"></a>
+                            <a href="#2"></a>
+                            <a href="#2"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--footer下部分-->
+            <div class="footer-three clearFix">
+                <div class="end-footer-left">
+                    <img src="imags/vmall.png" style="width:85px;height:20px"  alt=""/>
+                </div>
+                <div class="end-footer-middle">
+                    <p class="middle-p-one">
+                        <a href="#">华为集团</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                        <a href="#">华为CBG官网</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                        <a href="#">荣耀官网</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                        <a href="#">花粉俱乐部</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                        <a href="#">华为应用市场</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                        <a href="#">EMUI</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                        <a href="#">华为终端云空间</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                        <a href="#">开发者联盟</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                        <a href="#">华为商城手机版</a>&nbsp;&nbsp;|&nbsp;&nbsp;
+                        <a href="#">网站地图</a>
+                    </p>
+                    <p class="middle-p-two">
+                        <a href="#">隐私声明</a>
+                        <a href="#">服务协议</a>
+                        <a href="#">COOKIES</a>
+                        Copyright&copy;2012-2019华为软件技术有限公司&nbsp;版权所有&nbsp;保留一切权利
+                    </p>
+                    <p class="middle-p-three">
+                        公安备案
+                        <a herf="#">苏公网安备32011402010009号</a>&nbsp;|&nbsp;
+                        <a herf="#">苏ICP备17040376号-6</a>
+                    </p>
+                    <p class="middle-p-four">增值电信业务经营许可证：苏B2-20130048号|
+                        <a href="">网络文化经营许可证：苏网文[2015] 1599-026号</a></p>
+                </div>
+                <div class="end-footer-right">
+                    <a class="end-a2-img" href="#"><img src="imags/dzsj.png" alt=""/></a>
+                    <a class="end-a1-img" href="#"><img src="imags/rk.jpg" alt=""/></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

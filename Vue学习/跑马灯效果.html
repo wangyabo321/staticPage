@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>跑马灯效果</title>
+    <script src="js/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <input type="button" value="开始" @click="be"/>
+        <input type="button" value="停止" @click="stop"/>
+        <h4>{{smg}}</h4>
+    </div>
+
+    <script>
+        var vm = new Vue({
+            el:"#app",
+            data:{
+                smg:"hello Vue 的学习！",
+                clearinterval:null
+            },
+            methods:{
+                    be()
+        {
+            var clearinterval = setInterval(() = > {
+                start = this.smg.substring(0, 1);
+            end = this.smg.substring(1);
+            this.smg = end + start;
+        }
+        ,
+        500
+        )
+        ;
+
+        }
+        })
+    </script>
+</body>
+</html>

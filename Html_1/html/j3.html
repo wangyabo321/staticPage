@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>第一个Javascript程序</title>
+    <script>
+        //页面加载时执行的函数
+        function showEnter(){
+            alert("尊敬的客户，欢迎光临本网站");
+        }
+        //页面关闭时执行的函数
+        function showLeave(){
+            alert("欢迎下次光临");
+        }
+        window.onload=showEnter;//页面加载事件触发时调用函数
+        window.onbeforeunload=showLeave;//页面关闭事件触发时调用函数
+    </script>
+</head>
+<body>
+</body>
+</html>

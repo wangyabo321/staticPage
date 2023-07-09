@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>微信订单</title>
+    <link rel="stylesheet" href="../CSS/reset.css"/>
+    <style>
+        /*第一部分*/
+        header{height: 45px;width: auto;background-color:#fa486c}
+        .C1 p{text-align: center;color: white;font-size:20px;line-height: 44px;}
+        .C1 a{float:left;font-size:13px;color: white;line-height: 44px;margin-left:10px }
+        /*第二部分*/
+        .C2{display:flex;position: relative;height: 100px}
+        .C2 .ydc{flex-grow:2;}
+        .C2 .jt{flex-grow:1;}
+        .C2  .ydc{ background: url(../img/预定成功.png) no-repeat center;background-size: 60px;}
+        .C2 .jt{background: url(../img/箭头.png) no-repeat center;background-size: 15px}
+        /*第三部分*/
+        .C10{border-top: 1px solid #D3D3d3;padding-top: 15px}
+        .C10 h1{font-size:17px;font-weight:normal;border-left: 2px solid #ff5a84;margin-left: 13px;padding-left: 10px; }
+        .C10 .C11{border-top: 1px solid #d3d3d3;border-bottom: 1px solid #d3d3d3;margin:12px 0px;padding:12px 0px }
+        .C10 .C11 span{margin-left:13px;color:#a8a8a8}
+        .C10 .C11 i{font-style: normal;color:#434343}
+        /*第四部分*/
+        .C12{border-top: 1px solid #d3d3d3;padding-top: 10px}
+        .C12 h2{font-size: 17px;font-weight: normal;border-left: 2px solid #ff5a84;margin-left:13px;text-indent: 13px}
+        .C12 .C13{border-top: 1px solid #d3d3d3;border-bottom: 1px solid #d3d3d3;padding-top: 15px;padding-bottom: 15px;margin-top: 15px}
+        .C12 .C13 span{color:#a8a8a8;margin-left: 13px;}
+        .C12 .C13 i{font-style: normal}
+        /*第五部分*/
+        .C14 p{height: 40px;width: 550px;border:1px solid #a8a8a8;border-radius: 20px;margin:20px auto}
+        .C14 p{text-align: center;font-size:20px;line-height: 40px }
+        .C14 p:hover{background-color: #fa486c;color: white;}
+
+
+        /*第六部分*/
+        .C16{padding: 25px;margin-left:13px;font-size: 10px;}
+        .C16 .p1{color:#a8a8a8}
+        /*底部*/
+        .C15 .C17{height: 65px;width:100%;display: flex;border-top: 1px solid #d3d3d3;position: fixed;bottom: 0px;background-color: #ffffff}
+        .C15 .C17 .db{flex-grow: 1;}
+        .C15 .C17 .C18{background: url(../img/主页.png) no-repeat center;background-size:25px }
+        .C15 .C17 .C19{background: url(../img/订单.png) no-repeat center;background-size:25px }
+        .C15 .C17 .C20{background: url(../img/我的.png) no-repeat center;background-size:25px }
+        .C15 .C17 a{ display:block;font-size:15px;font-weight:normal;color:black;text-align:center;text-decoration: none;line-height: 105px}
+        .C15 .C17 a:hover{color: rosybrown}
+    </style>
+</head>
+<body>
+<div>
+<header class="C1">
+    <a href="#">< 返回</a>
+    <p>订单详情</p>
+</header>
+    <div class="C2">
+        <div class="C3 ydc"><a href="#"></a></div>
+        <div class="C4 jt"></div>
+        <div class="C5 ydc"><a href="#"></a></div>
+        <div class="C6 jt"></div>
+        <div class="C7 ydc"><a href="#"></a></div>
+        <div class="C8 jt"></div>
+        <div class="C9 ydc"><a href="#"></a></div>
+    </div>
+    <div class="C10">
+        <h1>货物信息</h1>
+        <div class="C11">
+            <p><span>商品名：</span><i> YSL圣罗兰口红</i></p>
+            <p><span>商品编号：</span><i>YSL12341231</i></p>
+            <p><span>商品价格：</span><i>&yen;320</i></p>
+            <p><span>收货地址：</span><i>西三旗桥东神舟科技园尚学堂</i></p>
+        </div>
+    </div>
+    <div class="C12">
+        <h2>支付信息</h2>
+        <div class="C13">
+            <p><span>原价格：</span><i style="text-decoration: line-through">&yen;400</i></p>
+            <p><span>实体价格：</span><i >&yen;320</i></p>
+            <p><span>支付方式：</span><i>微信支付</i></p>
+        </div>
+    </div>
+    <div class="C14"><p>取消订单</p></div>
+    <div class="C16">
+        <p class="p1">温馨提示</p>
+        <p>成功派单之后，不可取消订单</p>
+        <p>选择下线支付方式的，我们的服务人员会当面向您收取服务款。</p>
+    </div>
+    <footer class="C15" >
+        <div class="C17">
+            <div class="C18 db"><a href="#">首页</a></div>
+            <div class="C19 db"><a href="#">订单</a></div>
+            <div class="C20 db"><a href="#">我的</a></div>
+        </div>
+    </footer>
+</div>
+</body>
+</html>

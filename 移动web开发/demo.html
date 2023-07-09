@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0,
+                    maximum-scale=1.0, minimum-scale=1.0"/>
+    <link rel="stylesheet" href="css/reset.css"/>
+    <title>移动web开发</title>
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box; /*针对移动端 从盒子边缘计算*/-webkit-box-sizing:border-box;
+         /*点击清除高亮效果*/-webkit-tap-highlight-color:transparent; }
+        .container{width:100%;height:1000px;max-width:640px;min-width:320px;margin:0 auto;background:#f5f4f6;}
+        .search{position:fixed;top:0;left:0;width:100%;z-index:2;}
+        .search .search-box{width:100%;height:40px;max-width:640px;min-width: 320px;margin:0 auto;
+                            background:#d81480;position: relative;}
+        .search-box a{position: absolute;top:0;}
+        .search-box a.search-box-a1{left:0;line-height:40px;width:50px;display: inline-block;}
+        .search-box a.search-box-a1 img{width:55px;height:40px;line-height:40px;text-align:center;}
+        .search-box a.search-box-a2{right:0;color:white;text-decoration:none;line-height:40px;width:40px;
+                                    height:40px;text-align:center;}
+        .search-box form{width:100%;height:40px;padding-left:60px;padding-right:50px;position:relative;}
+        .search-box form input{width:100%;height:30px;margin-top:5px;border-radius:15px;padding-left:30px;
+                                font-size:12px;}
+        .search-box form span{width:20px;height:20px;background: url(img/搜索.png) no-repeat;
+                               background-size:20px 20px;position: absolute;left:65px;top:10px;}
+        /*轮播图*/
+        .banner{width:100%;overflow:hidden;position: relative;}
+        .banner ul.list-img{width:1000%;transform:translateX(-10%);}
+        .banner ul.list-img li{width:10%;float:left;}
+        .banner ul.list-img li a{display:block;width:100%;}
+        .banner ul.list-img li a img{display:block;width:100%;}
+        .banner ul.list-dot{position:absolute;left:72%;bottom:18px;width:137px;z-index:2;}
+        .banner ul.list-dot li{width:10px;height:10px;border-radius:5px;float:left;margin-left:8px;
+                               border:1px solid #999;}
+        .banner ul.list-dot li.list-dot-now{ margin-left:0;background:white;}
+        /*<!--分类列表区-->*/
+        .list{width:100%;height:165px;background:white}
+        .list ul{width:100%;}
+        .list ul li{width:25%;float:left;text-align:center;padding-top:15px;}
+        .list ul li a{width:100%;display:block;font-size:10px}
+        .list ul li a img{width:40px;height:40px;margin:0 auto;display:block;}
+        .list ul li a p{width:100%;padding-top:5px}
+        /*<!--内容区-->*/
+        .content{padding:0 5px;}
+        .content .proBox{margin-top:10px;box-shadow:0 0 1px #d8d8d8;background:#fff}
+        .proBox .proBox-top{height:34px;line-height:34px;border-bottom:1px solid #888;}
+        .content div.nb{border-bottom:none}
+        .proBox-top .proBox-img{width:20px;height:20px;margin:7px 10px 0 10px;background:url(img/定时器.png) no-repeat;
+                               background-size:20px 20px;float:left;}
+        .proBox-top .proBox-ms{float:left;margin-right:10px;font-size:12px;color:#666;}
+        .proBox-top .proBox-time span{height:20px;line-height:20px;text-align: center;width:15px;margin:7px 5px 0 0;
+                                   background:#000;color:white;float:left}
+        .proBox-top .proBox-time span:nth-child(3n){width:2px;background:none;color:#000;font-weight:bold}
+        .proBox-top a{float:right;margin-right:10px;font-size:12px;}
+        /*掌上秒杀 内容*/
+        .proBox-bom ul.proBox-list{width:100%;}
+        .proBox-bom ul.proBox-list li{width:33.333%;text-align:center;float:left;}
+        .proBox-bom ul.proBox-list li p{font-size:10px;margin-top:5px;color:#d81480}
+        .proBox-bom ul.proBox-list li p:last-child{color:#888;text-decoration:line-through}
+        .proBox-bom ul.proBox-list li a{width:100%;display: block;margin:0 auto;border-right:1px solid #666;}
+        .proBox-bom ul.proBox-list li:last-child a{border-right:none}
+        .proBox-bom ul.proBox-list li a img{width:55%;display: block;margin:0 auto;}
+         /*京东自营，京东超市，京东热门*/
+        .proBox-top h3{position: relative;text-indent:18px;font-size:12px;}
+        .proBox-top h3::before{content:"";position:absolute;top:0;left:0;width:2px;height:12px;background:#843534;
+                              margin:9px 0 0 10px;}
+        .width-50{width:50%;}
+        .width-50 img{width:100%;display: block;margin:0 auto;}
+        .b-left{border-left:1px solid #ddd}
+        .b-right{border-right:1px solid #ddd}
+        .b-bottom{border-bottom:1px solid #ddd}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!--搜索栏-->
+        <div class="search">
+            <div class="search-box">
+                <a class="search-box-a1" href="#"><img src="img/京东.png" alt="图片未显示"/></a>
+                <form action="">
+                    <span></span>
+                    <input type="search" placeholder="请输入你要购买的商品"/>
+                </form>
+                <a class="search-box-a2" href="#">登录</a>
+            </div>
+        </div>
+        <!--轮播图-->
+        <div class="banner">
+            <ul class="list-img ">
+                <li><a href="#"><img src="img/jd8.jpg" alt="图片未显示"/></a></li>
+                <li><a href="#"><img src="img/jd1.jpg" alt="图片未显示"/></a></li>
+                <li><a href="#"><img src="img/jd2.jpg" alt="图片未显示"/></a></li>
+                <li><a href="#"><img src="img/jd3.jpg" alt="图片未显示"/></a></li>
+                <li><a href="#"><img src="img/jd4.jpg" alt="图片未显示"/></a></li>
+                <li><a href="#"><img src="img/jd5.jpg" alt="图片未显示"/></a></li>
+                <li><a href="#"><img src="img/jd6.jpg" alt="图片未显示"/></a></li>
+                <li><a href="#"><img src="img/jd7.jpg" alt="图片未显示"/></a></li>
+                <li><a href="#"><img src="img/jd8.jpg" alt="图片未显示"/></a></li>
+                <li><a href="#"><img src="img/jd1.jpg" alt="图片未显示"/></a></li>
+            </ul>
+            <ul class="list-dot">
+                <li class="list-dot-now"></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <div class="clear"></div>
+            </ul>
+        </div>
+        <!--分类列表区-->
+        <div class="list">
+            <ul class="">
+                <li><a href="#"><img src="img/jd-list1.png" alt=""/><p>分类</p></a></li>
+                <li><a href="#"><img src="img/jd-list2.png" alt=""/><p>分类</p></a></li>
+                <li><a href="#"><img src="img/jd-list3.png" alt=""/><p>分类</p></a></li>
+                <li><a href="#"><img src="img/jd-list4.png" alt=""/><p>分类</p></a></li>
+                <li><a href="#"><img src="img/jd-list5.png" alt=""/><p>分类</p></a></li>
+                <li><a href="#"><img src="img/jd-list6.png" alt=""/><p>分类</p></a></li>
+                <li><a href="#"><img src="img/jd-list7.png" alt=""/><p>分类</p></a></li>
+                <li><a href="#"><img src="img/jd-list8.png" alt=""/><p>分类</p></a></li>
+                <div class="clear"></div>
+            </ul>
+        </div>
+        <!--内容区-->
+        <div class="content">
+            <div class="proBox">
+                <div class="proBox-top  nb">
+                    <span class="proBox-img"></span>
+                    <sapn class="proBox-ms">掌上秒杀</sapn>
+                    <div class="proBox-time">
+                        <span>0</span>
+                        <span>0</span>
+                        <span>:</span>
+                        <span>0</span>
+                        <span>0</span>
+                        <span>:</span>
+                        <span>0</span>
+                        <span>0</span>
+                    </div>
+                    <a href="#">更多></a>
+                </div>
+                <div class="proBox-bom">
+                    <ul class="proBox-list">
+                        <li>
+                            <a href="#"><img src="img/jd-zs3.jpg" alt=""/></a>
+                            <p class="now-price">￥100.00</p>
+                            <p class="old-price">￥250.00</p>
+                        </li>
+                        <li>
+                            <a href="#"><img src="img/jd-zs4.jpg" alt=""/></a>
+                            <p class="now-price">￥100.00</p>
+                            <p class="old-price">￥250.00</p>
+                        </li>
+                        <li>
+                            <a href="#"><img src="img/jd-zs3.jpg" alt=""/></a>
+                            <p class="now-price">￥100.00</p>
+                            <p class="old-price">￥250.00</p>
+                        </li>
+                        <div class="clear"></div>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="proBox">
+                <div class="proBox-top">
+                    <h3>京东自营</h3>
+                </div>
+                <div class="proBox-bom">
+                    <a class="width-50 f_left b-right" href="#"><img style="height:300px;" src="img/jd-zs6.jpg" alt=""/></a>
+                    <a class="width-50 f_right b-bottom" href="#"><img style="height:150px" src="img/jd-zs3.jpg" alt=""/></a>
+                    <a class="width-50 f_right" href="#"><img style="height:150px" src="img/jd-zs4.jpg" alt=""/></a>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <div class="proBox">
+                <div class="proBox-top"><h3>京东超市</h3></div>
+                <div class="proBox-bom">
+                    <a class="width-50 f_left b-bottom" href="#"><img style="height:150px" src="img/jd-zs4.jpg" alt=""/></a>
+                    <a class="width-50 f_right b-left" href="#"><img style="height:300px;" src="img/ji-zs2.jpg" alt=""/></a>
+                    <a class="width-50 f_left" href="#"><img style="height:150px" src="img/jd-zs3.jpg" alt=""/></a>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <div class="proBox">
+                <div class="proBox-top">
+                    <h3>京东热门</h3>
+                </div>
+                <div class="proBox-bom">
+                    <a class="width-50 f_left b-right" href="#"><img style="height:300px;" src="img/jd-zs6.jpg" alt=""/></a>
+                    <a class="width-50 f_right b-bottom" href="#"><img style="height:150px" src="img/jd-zs3.jpg" alt=""/></a>
+                    <a class="width-50 f_right" href="#"><img style="height:150px" src="img/jd-zs4.jpg" alt=""/></a>
+                    <div class="clear"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

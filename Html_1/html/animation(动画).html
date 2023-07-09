@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Animation(动画)</title>
+    <style>
+        /*div{height:200px;background:url(../img/向日葵.jpg) no-repeat;background-size: 200px}*/
+        /*@keyframes my_dh{*/
+            /*from{background:url(../img/船.jpg) no-repeat;background-size: 200px}*/
+            /*to{background:url(../img/猫.jpg) no-repeat;background-size: 200px}*/
+        /*}*/
+        /*div:hover{animation:my_dh 15s}*/
+        img{height: 200px;width: 200px;border-radius:100px}
+        @keyframes CD_turn{
+            from{transform:rotate(0deg)}
+            to{transform:rotate(360deg)}
+        }
+        img:hover{animation:3s linear infinite CD_turn}
+    </style>
+</head>
+<body>
+<!--<div></div>-->
+<img src="../img/船.jpg" alt=""/>
+</body>
+</html>

@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>旅游网第一部分</title>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        .main-tour{
+            height:690px;
+            width:100%;
+        }
+        .main-tour .main-tour-cen{
+            height:690px;
+            width:1200px;
+            margin:0 auto;
+        }
+        .main-tour .main-tour-cen .main-img{
+            height:70px;
+            text-align:center;
+            padding-top:15px;
+
+        }
+        .main-tour .main-tour-cen .main-nav{
+
+            height:30px;
+            padding-left:50px;
+        }
+        .main-tour .main-tour-cen .main-nav ul.main-nav-ul li{
+            float:left;
+            height:30px;
+            width:80px;
+            line-height:30px;
+            text-align:center;
+            list-style:none;
+            position:relative;
+            margin-bottom: 6px;
+        }
+        .main-tour .main-tour-cen .main-nav ul.main-nav-ul a{
+            line-height:30px;
+            height:30px;
+            width:80px;
+            display:inline-block;
+            text-decoration:none;
+            font-family: '微软雅黑', 'Times New Roman', Times, serif;
+            font-size:13px;
+            color:#333;
+        }
+        .hover-bk{
+            background:#e4007e;
+        }
+        /*第三部分*/
+        .main-tour .main-tour-cen .main-con .main-con-l{
+            height:590px;
+            width:280px;
+            float:left;
+            border:1px solid #f5f5f9;
+        }
+        .main-tour .main-con-l .main-con-lt{
+            font-family:'微软雅黑', 'Times New Roman', Times, serif;
+            height: 130px;
+            width: 280px;
+            padding-top:25px;
+        }
+        .main-tour .main-con-l .main-con-lt span{
+            display: inline-block;
+            line-height:30px;
+            width:240px;
+            font-size: 13px;
+            font-weight:bold;
+            background:#f5f5f9;
+            margin-left:20px;
+        }
+        .main-tour .main-con-l .main-con-lt ul.lt-ul li{
+            float:left;
+            margin:8px 0 0 20px;
+            text-align:center;
+            width: 60px;
+            /*height: 20px;*/
+            line-height:22px;
+            list-style: none;
+            border:1px solid #000;
+            /*overflow:hidden*/
+        }
+        .main-tour .main-con-l .main-con-lt ul.lt-ul li a{
+            font-family: '微软雅黑', 'Times New Roman', Times, serif;
+            display:block;
+            float: left;
+            line-height:22px;
+            width:60px;
+            /*height:20px;*/
+            text-decoration:none;
+            color:#666;
+            font-size:10px;
+            border:1px solid blue;
+        }
+        .hover-bc{
+            background:#e4007e;
+            color:white;
+        }
+        .main-tour .main-con-l .main-con-lc{
+            height: 250px;
+            width: 280px;
+        }
+        .main-tour .main-con-l .main-con-lb{
+            height:135px;
+            width: 280px;
+        }
+        /*第四部分*/
+        .main-tour .main-tour-cen .main-con .main-con-r{
+            height:590px;
+            width:916px;
+            float: right;
+            border:1px solid #f5f5f9;
+        }
+        .main-tour .main-tour-cen .main-con-r .main-rl{
+            height:590px;
+            width:605px;
+            float:left;
+        }
+        .main-tour  .main-con-r .main-rl .main-rl-img li{
+            float:left;
+            width:290px;
+            height:260px;
+            margin:25px 0 0 10px;
+            list-style: none;
+        }
+        .main-tour  .main-con-r .main-rl .main-rl-img li a{
+            font-family: '微软雅黑', 'Times New Roman', Times, serif;
+            font-size:13px;
+            text-decoration:none;
+            color:black;
+        }
+        .main-tour  .main-con-r .main-rl .main-rl-img li p{
+            text-align:right;
+            font-family: '微软雅黑', 'Times New Roman', Times, serif;
+            font-size:14px;
+            font-weight:bold;
+            color:#e4007e;
+
+        }
+        .main-tour  .main-con-r .main-rl .main-rl-img li p span{
+            font-size:8px;
+            font-weight:normal;
+            color:black;
+        }
+
+        .main-tour .main-tour-cen .main-con-r .main-rr{
+            height:565px;
+            width:311px;
+            float:right;
+            text-align: center;
+            padding-top:25px;
+        }
+        .main-tour .main-tour-cen .main-con-r .main-rr p{
+            text-align: left;
+            width:309px;
+            height:40px;
+            line-height: 40px;
+            background:#f5f5f9;
+            text-indent: 10px;
+            margin-top: 5px;
+            font-family: '微软雅黑', 'Times New Roman', Times, serif;
+            font-size:14px;
+        }
+        .main-tour .main-tour-cen .main-con-r .main-rr p span{
+            display: inline-block;
+            float: right;
+            font-weight:bold;
+            color:#e4007e;
+        }
+        .main-tour .main-tour-cen .main-con-r .main-rr p i{
+            display: inline-block;
+            float: right;
+            margin-right: 15px;
+            font-size:10px;
+            font-style: normal;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-tour">
+        <div class="main-tour-cen">
+            <div class="main-img">
+                <a href="#"><img src="img/main-cjlytop.jpg" alt="图片未显示"/></a>
+            </div>
+            <div class="main-nav">
+                <ul class="main-nav-ul">
+                    <li><a href="#">海岛</a></li><li><a href="#">台湾</a></li>
+                    <li><a href="#">欧洲</a></li><li><a href="#">美国</a></li>
+                    <li><a href="#">迪拜</a></li><li><a href="#">港澳</a></li>
+                    <li><a href="#">南北极</a></li><li><a href="#">泰国</a></li>
+                    <li><a href="#">新加坡</a></li><li><a href="#">日本</a></li>
+                    <li><a href="#">澳大利亚</a></li>
+                </ul>
+            </div>
+            <div class="main-con">
+                <div class="main-con-l">
+                    <div class="main-con-lt">
+                        <span>出境游跟团热门目的地</span>
+                        <ul class="lt-ul">
+                            <li><a href="#">泰新马</a></li>
+                            <li><a href="#">美国</a></li>
+                            <li><a href="#">澳新</a></li>
+                        </ul>
+                        <ul class="lt-ul">
+                            <li><a href="#">欧洲</a></li>
+                            <li><a href="#">台湾</a></li>
+                            <li><a href="#">海岛</a></li>
+                        </ul>
+                    </div>
+                    <div class="main-con-lt main-con-lc">
+                        <span>出境游跟团热门景点</span>
+                        <ul class="lt-ul">
+                            <li><a href="#">泰国</a></li>
+                            <li><a href="#">新加坡</a></li>
+                            <li><a href="#">日本</a></li>
+                        </ul>
+                        <ul class="lt-ul">
+                            <li><a href="#">越柬挝</a></li>
+                            <li><a href="#">迪拜</a></li>
+                            <li><a href="#">美国</a></li>
+                        </ul>
+                        <ul class="lt-ul">
+                            <li><a href="#">澳大利亚</a></li>
+                            <li><a href="#">新西兰</a></li>
+                            <li><a href="#">俄罗斯</a></li>
+                        </ul>
+                        <ul class="lt-ul">
+                            <li><a href="#">法国</a></li>
+                            <li><a href="#">意大利 </a></li>
+                            <li><a href="#">瑞士</a></li>
+                        </ul>
+                        <ul class="lt-ul">
+                            <li><a href="#">西班牙</a></li>
+                            <li><a href="#">台湾</a></li>
+                            <li><a href="#">普吉岛</a></li>
+                        </ul>
+                        <ul class="lt-ul">
+                            <li><a href="#">苏梅岛</a></li>
+                            <li><a href="#">美娜多</a></li>
+                        </ul>
+                    </div>
+                    <div class="main-con-lt main-con-lb">
+                        <span>出境热门玩法</span>
+                        <ul class="lt-ul">
+                            <li><a href="#">自由行</a></li>
+                            <li><a href="#">老顽童</a></li>
+                            <li><a href="#">包机</a></li>
+                        </ul>
+                        <ul class="lt-ul">
+                            <li><a href="#">温泉</a></li>
+                            <li><a href="#">特价</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="main-con-r">
+                    <div class="main-rl">
+                        <ul class="main-rl-img">
+                            <li>
+                                <img src="img/main-xxl.jpg" alt="图片未显示"/>
+                                <a href="#">&nbsp;新西兰南北双岛奇幻跟队自驾游12日</a>
+                                <p>￥29800&nbsp;<span>起</span></p>
+                            </li>
+                            <li>
+                                <img src="img/main-pty.jpg" alt="图片未显示"/>
+                                <a href="#">&nbsp;艺术与激情之地西班牙+葡萄牙跟队自驾游14日</a>
+                                <p>￥23800&nbsp;<span>起</span></p></li>
+                        </ul>
+                        <ul class="main-rl-img">
+                            <li>
+                                <img src="img/main-hbd.jpg" alt="图片未显示"/>
+                                <a href="#">&nbsp;奇幻星球-环冰岛跟队自驾游11日</a>
+                                <p>￥23800&nbsp;<span>起</span></p>
+                            </li>
+                            <li>
+                                <img src="img/main-oz.jpg" alt="图片未显示"/>
+                                <a href="#">&nbsp;一价全含金牌欧洲四国12天-单点-意签</a>
+                                <p>￥16980&nbsp;<span>起</span></p></li>
+                        </ul>
+                    </div>
+                    <div class="main-rr">
+                        <img src="img/main-hn.jpg" alt="图片未显示"/>
+                        <p>&nbsp;海岛游<i>起</i><span>￥3999</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main-tour">
+        <div class="main-tour-cen">
+            <div class="main-img">
+                <a href="#"><img src="img/main-cjlytop.jpg" alt="图片未显示"/></a>
+            </div>
+            <div class="main-nav">
+                <ul class="main-nav-ul">
+                    <li><a href="#">云南</a></li><li><a href="#">三亚</a></li>
+                    <li><a href="#">广东</a></li><li><a href="#">厦门</a></li>
+                    <li><a href="#">贵州</a></li><li><a href="#">新疆</a></li>
+                    <li><a href="#">广西</a></li><li><a href="#">湖南</a></li>
+                    <li><a href="#">青大</a></li><li><a href="#">重庆三峡</a></li>
+                    <li><a href="#">东三省</a></li>
+                </ul>
+            </div>
+            <div class="main-con">
+                <div class="main-con-l">
+                    <div class="main-con-lt">
+                        <span>国内游跟团热门目的地</span>
+                        <ul class="lt-ul">
+                            <li><a href="#">北京</a></li>
+                            <li><a href="#">三亚</a></li>
+                            <li><a href="#">贵州</a></li>
+                        </ul>
+                        <ul class="lt-ul">
+                            <li><a href="#">广东</a></li>
+                            <li><a href="#">厦门</a></li>
+                            <li><a href="#">云南</a></li>
+                        </ul>
+                    </div>
+                    <div class="main-con-lt main-con-lc">
+                        <span>国内游跟团热门景点</span>
+                        <ul class="lt-ul">
+                            <li><a href="#">北京</a></li>
+                            <li><a href="#">海南</a></li>
+                            <li><a href="#">三亚</a></li>
+                        </ul>
+                        <ul class="lt-ul">
+                            <li><a href="#">广东</a></li>
+                            <li><a href="#">放鸡岛</a></li>
+                            <li><a href="#"> 广州长隆</a></li>
+                        </ul>
+                        <ul class="lt-ul">
+                            <li><a href="#">海陵岛</a></li>
+                            <li><a href="#">珠海长隆</a></li>
+                            <li><a href="#">厦门</a></li>
+                        </ul>
+                        <ul class="lt-ul">
+                            <li><a href="#">九寨</a></li>
+                            <li><a href="#">云南</a></li>
+                            <li><a href="#">大理</a></li>
+                        </ul>
+                        <ul class="lt-ul">
+                            <li><a href="#">丽江</a></li>
+                            <li><a href="#">杭州</a></li>
+                            <li><a href="#">上海</a></li>
+                        </ul>
+                        <ul class="lt-ul">
+                            <li><a href="#">黄山</a></li>
+                        </ul>
+                    </div>
+                    <div class="main-con-lt main-con-lb">
+                        <span>国内游热门玩法</span>
+                        <ul class="lt-ul">
+                            <li><a href="#">自由行</a></li>
+                            <li><a href="#">老顽童</a></li>
+                            <li><a href="#">包机</a></li>
+                        </ul>
+                        <ul class="lt-ul">
+                            <li><a href="#">温泉</a></li>
+                            <li><a href="#">特价</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="main-con-r">
+                    <div class="main-rl">
+                        <ul class="main-rl-img">
+                            <li>
+                                <img src="img/main-cd.jpg" alt="图片未显示"/>
+                                <a href="#">&nbsp;【圣洁·色达】成都-观音庙-色达佛学院双卧8日游</a>
+                                <p>￥29800&nbsp;<span>起</span></p>
+                            </li>
+                            <li>
+                                <img src="img/main-hy.jpg" alt="图片未显示"/>
+                                <a href="#">&nbsp;私人定制-越野穿沙纵情胡杨林双飞双卧六日游</a>
+                                <p>￥23800&nbsp;<span>起</span></p></li>
+                        </ul>
+                        <ul class="main-rl-img">
+                            <li>
+                                <img src="img/main-bl.jpg" alt="图片未显示"/>
+                                <a href="#">&nbsp;【超级南北疆】 伊宁薰衣草-巴音布鲁克天鹅湖-空中草原那拉</a>
+                                <p>￥23800&nbsp;<span>起</span></p>
+                            </li>
+                            <li>
+                                <img src="img/main-bd.jpg" alt="图片未显示"/>
+                                <a href="#">&nbsp;额济纳旗 巴丹吉林沙漠 张掖 酒泉双飞双动7日游</a>
+                                <p>￥16980&nbsp;<span>起</span></p></li>
+                        </ul>
+                    </div>
+                    <div class="main-rr">
+                        <img src="img/main-sy.jpg" style="height:510px;width:280px" alt="图片未显示"/>
+                        <p>&nbsp;海岛游<i>起</i><span>￥3999</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(function(){
+            $('.main-tour  ul.main-nav-ul li').hover(function(){
+                $(this).addClass('hover-bk');
+                $(this).find('a').css('color','white');
+            },function(){
+                $(this).find('a').css('color','#333');
+                $(this).removeClass('hover-bk');
+            });
+//            第三部分
+            $('.main-tour .main-con-l .main-con-lt .lt-ul li').hover(function(){
+                $(this).addClass('hover-bc');
+                $(this).find('a').css('color','white')
+            },function(){
+                $(this).removeClass('hover-bc');
+                $(this).find('a').css('color','#666')
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript">
+        while(true){
+        var sum = prompt("请输入小明的期末成绩：");
+         if(sum>=0 || sum<=100 || !isNaN(sum)) {
+                 if (sum == 100) {
+                     alert("奖励一辆BMW。");
+                     break;
+                 }
+                 else if (sum > 80) {
+                     alert("奖励一台iphone15s。");
+                     break;
+                 }
+                 else if (sum > 60) {
+                     alert("奖励一本参考书。");
+                     break;
+                 }
+                 else {
+                     alert("什么奖励也没有。");
+                     break;
+                 }
+         }
+         else{
+                    alert("你输入的数字无效，请重新输入。");
+
+         }
+        }
+    </script>
+</head>
+<body>
+</body>
+</html>

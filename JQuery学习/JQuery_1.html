@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>JQuery学习1</title>
+    <script src="jquery-3.3.1.min.js"></script>
+    <script>
+       /* $(function(){
+          // alert('JQuery学习');
+            $('p').click(function(){
+                //$(this).hide();
+                alert($(this).html());
+            });
+        });*/
+    </script>
+    <script>
+       $(document).ready(function(){
+           $('button').click(function(){
+               //$('p').text('p标签内容被修改了！');
+              // $('#pId').text('p标签内容被修改了！');
+               //$('.pClass').text('p标签内容被修改了！');
+           });
+       });
+    </script>
+</head>
+<body>
+<!--测试1-->
+<!--<p>第一个p元素</p>
+    <p>第二个p元素</p>
+    <p>第三个p元素</p>
+    <p>第四个p元素</p>
+    <p>第五个p元素</p>
+    <p>第六个p元素</p>-->
+<!--测试2-->
+
+<p class="p1"><h4>第一个p标签</h4></p>
+<p id="pId" class="pClass">第二个p标签</p>
+<p class="p3">p标签</p>
+<button>点击按钮改变p标签元素</button>
+</body>
+</html>

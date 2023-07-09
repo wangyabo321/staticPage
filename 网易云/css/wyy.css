@@ -1,0 +1,9 @@
+*{margin:0;padding:0;}
+.nav{height:45px;width:auto;background:#333333;    font-family: "\5B8B\4F53",sans-serif}
+.nav .nav_1eft{height:45px;width:190px;float:left;text-align:center;line-height:45px;font-size:13px
+               ;font-weight:100;position:relative;}
+.nav .nav_1eft a{color:#fff;text-decoration:none}
+.nav .nav_1eft a.nav_a{display: inline-block;margin-left:15px;padding-right:15px;width:60px;height:45px;border:1px solid red;}
+.nav .nav_1eft a.nav_a img{height:10px;width:10px;margin-left:5px}
+.nav .nav_1eft a.nav_a .cd{height:300px;width: 135px;background:red}
+.nav .nav_right{height:45px;width:875px;background:blue;float:right}

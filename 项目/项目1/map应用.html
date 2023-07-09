@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>map应用</title>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <style>
+        .map{
+            width:509px;
+            height:339px;
+            position: fixed;
+            left:30%;
+            top:20%;
+        }
+    </style>
+</head>
+<body>
+<div class="map">
+    <img  src="swf119.png" usemap="#use-img" border="0" alt="图片未显示"/>
+    <map name="use-img">
+        <area shape="rect" coords="463 89 495 118" href="#" alt="close"/>
+        <area shape="rect" coords="301 297 382 324" href="#" alt="msZx"/>
+        <area shape="rect" coords="390 293 472 324" href="#" alt="xhZx"/>
+    </map>
+</div>
+<script>
+    $(function(){
+        $('map area').click(function(){
+            $('.map img').css('display','none');
+        });
+    });
+</script>
+</body>
+</html>

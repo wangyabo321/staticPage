@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>JQuery冲突问题的解决方案</title>
+    <script src="../JQuery/jquery-3.3.1.min.js"></script>
+    <script>
+        //1.释放￥的使用权
+        // 注意：释放操作必须在编写其他JQuery代码之前编写
+        //      释放之后就不能在使用$,改写使用jQuery
+        // jQuery.noConflict();
+        //2.自定义一个访问符号。例如：var jq = jQuery.noConflict();
+        var nj = jQuery.noConflict();
+        nj(function(){
+            alert("jQuery冲突问题")
+        });
+    </script>
+</head>
+<body>
+
+</body>
+</html>

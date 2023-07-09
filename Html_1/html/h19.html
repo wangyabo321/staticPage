@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript">
+      /*  var a=0.1;
+        var b=0.1;
+        var c;
+        c=a+b;
+       if(c==0.2){
+        alert("等于");
+       }
+        else
+       {
+        alert("不等于");
+       }
+       // alert(typeof a);
+       */
+       // var arr=[10,,4,2,5,7,2,3];
+        //arr.sort();
+       // alert(arr);
+        //arr.reverse();
+        //alert(arr);
+
+
+        // sort排序 和 reverse 倒序
+        var arr1=[5,2,1,4,3];
+        var arr2=[10,2,4,1,7];
+        function compare(value1 ,value2){
+            if(value1<value2){
+                return -1;
+            }
+            else if(value1>value2){
+                return 1;
+
+            }
+            else{
+                return 0;
+            }
+        }
+        arr2.sort(compare);
+        document.write(arr2);
+    </script>
+</head>
+<body>
+</body>
+</html>

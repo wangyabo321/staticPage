@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>达人游戏</title>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        .tour-dr{
+            height:380px;
+            width:1200px;
+            margin:50px auto 0 auto;
+            /*background:red;*/
+        }
+        .tour-dr .tour-f{
+            height:380px;
+            width:208px;
+            position: relative;
+        }
+        .tour-dr .tour-f a{
+            display: inline-block;
+            margin:20px 0 15px 0;
+        }
+        .tour-dr .tour-f .tour-list li{
+            width:20px;
+            height:20px;
+            list-style:none;
+            background:#999;
+            border-radius:50%;
+            margin-top:20px;
+        }
+        .tour-dr .tour-f .tour-list li.hover-tour-list{
+            background:#e4007e;
+        }
+        .tour-dr .tour-f .tour-list-cen{
+            width:992px;
+            height:380px;
+            margin-top:0;
+            position:absolute;
+            top:-2px;
+            left:208px;
+            display: none;
+        }
+        .tour-dr .tour-f .tour-list-cen .tour-cen-dzf{
+            height:380px;
+            width:329px;
+            float: left;
+        }
+        .tour-dr .tour-f .tour-list-cen .tour-cen-dzf p.p1{
+            height:20px;
+            margin-bottom:23px;
+        }
+        .tour-dr .tour-f .tour-list-cen .tour-cen-dzf p.p1 a{
+            display: inline-block;
+            height:20px;
+            font-size:12px;
+            color:#666;
+            line-height:20px;
+            text-decoration:none;
+            margin:0;
+        }
+        .tour-dr .tour-f .tour-list-cen .tour-cen-dzf p.p2{
+            height:100px;
+            margin-bottom:-100px;
+        }
+        .tour-dr .tour-f .tour-list-cen .tour-cen-dzf p.p2 img{
+            height:35px;
+            width:35px;
+            border-radius:50%
+        }
+        .tour-dr .tour-f .tour-list-cen .tour-cen-dzf p.p2 span{
+            font-family: '微软雅黑', 'Times New Roman', Times, serif;
+            font-size:12px;
+            color:#666;
+        }
+        .tour-dr .tour-f .tour-list-cen .tour-cen-dzf p.p2 span img{
+            height:12px;
+            width:12px;
+        }
+        .tour-dr .tour-f .tour-list-cen .tour-cen-dzf p.p3{
+            text-align: center;
+            margin-top:35px;
+        }
+        .rm{
+            margin-top:65px;
+            width:120px;
+            height:30px;
+            line-height:30px;
+            text-align: center;
+            font-family: '微软雅黑', 'Times New Roman', Times, serif;
+            font-size:12px;
+            color:#666;
+            background:#dbdbdb;
+        }
+        .rm:hover{
+            background: #e4007e;
+            color:white;
+        }
+        .tour-dr .tour-f .tour-list-cen .tour-cen-dzc{
+            height:380px;
+            width:328px;
+            float: left;
+        }
+        }
+        .tour-dr .tour-f .tour-list-cen .tour-cen-dzr{
+            height:380px;
+            width:329px;
+            float:right;
+        }
+    </style>
+</head>
+<body>
+    <div class="tour-dr">
+        <div class="tour-f">
+            <a href="#"><img src="img/drlytop.png" alt="图片未显示"/></a>
+            <ul class="tour-list">
+                <li class="hover-tour-list"></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+            <div class="tour-list-cen" >
+                <div class="tour-cen-dzf">
+                    <p class="p1">
+                        <img src="img/drlybticon.png" alt="图片未显示"/>
+                        <a href="#">行走中的巴尔干</a>
+                    </p>
+
+                    <p class="p2">
+                        <img src="img/dr-n.jpg" alt="图片未显示"/>
+                        <span><img src="img/dr-z.png" alt="图片未显示"/>&nbsp;出发日期：2018/1/5</span>
+                        <h4 class="rm">ReadMore</h4>
+                    </p>
+
+                    <p class="p3">
+                        <a href="#">
+                            <img src="img/dr-f.png" alt="图片未显示"/>
+                        </a>
+                    </p>
+                </div>
+                <div class="tour-cen-dzc tour-cen-dzf">
+                    <p class="p3" style="margin-top:-8px">
+                        <a href="#">
+                            <img src="img/tour-1.png" alt="图片未显示"/>
+                        </a>
+                    </p>
+                    <p class="p1">
+                        <img src="img/drlybticon.png" alt="图片未显示"/>
+                        <a href="#">莫问天涯远</a>
+                    </p>
+                    <p class="p2">
+                        <img src="img/tour-2.jpg" alt="图片未显示"/>
+                        <span><img src="img/dr-z.png" alt="图片未显示"/>&nbsp;出发日期：2018/1/5</span>
+                    <h4 class="rm">ReadMore</h4>
+                    </p>
+                </div>
+                <div class="tour-cen-dzr tour-cen-dzf">
+                    <p class="p1">
+                        <img src="img/drlybticon.png" alt="图片未显示"/>
+                        <a href="#">西北自由行</a>
+                    </p>
+                    <p class="p2">
+                        <img src="img/tour-3.jpg" alt="图片未显示"/>
+                        <span><img src="img/dr-z.png" alt="图片未显示"/>&nbsp;出发日期：2017/2/13</span>
+                    <h4 class="rm">ReadMore</h4>
+                    </p>
+                    <p class="p3">
+                        <a href="#">
+                            <img src="img/tour-4.jpg" alt="图片未显示"/>
+                        </a>
+                    </p>
+                </div>
+            </div>
+            <div class="tour-list-cen" >
+                <div class="tour-cen-dzf">
+                    <p class="p1">
+                        <img src="img/drlybticon.png" alt="图片未显示"/>
+                        <a href="#">浪漫雪国 本州6日游</a>
+                    </p>
+
+                    <p class="p2">
+                        <img src="img/tour-5.jpg" alt="图片未显示"/>
+                        <span><img src="img/dr-z.png" alt="图片未显示"/>&nbsp;出发日期：2017/2/13</span>
+                    <h4 class="rm">ReadMore</h4>
+                    </p>
+
+                    <p class="p3">
+                        <a href="#">
+                            <img src="img/tour-6.jpg" alt="图片未显示"/>
+                        </a>
+                    </p>
+                </div>
+                <div class="tour-cen-dzc tour-cen-dzf">
+                    <p class="p3" style="margin-top:-8px">
+                        <a href="#">
+                            <img src="img/tour-7.jpg" alt="图片未显示"/>
+                        </a>
+                    </p>
+                    <p class="p1">
+                        <img src="img/drlybticon.png" alt="图片未显示"/>
+                        <a href="#">传统与时尚并蓄的泰国</a>
+                    </p>
+                    <p class="p2">
+                        <img src="img/tour-8.jpg" alt="图片未显示"/>
+                        <span><img src="img/dr-z.png" alt="图片未显示"/>&nbsp;出发日期：2017/2/13</span>
+                    <h4 class="rm">ReadMore</h4>
+                    </p>
+                </div>
+                <div class="tour-cen-dzr tour-cen-dzf">
+                    <p class="p1">
+                        <img src="img/drlybticon.png" alt="图片未显示"/>
+                        <a href="#">九寨沟</a>
+                    </p>
+                    <p class="p2">
+                        <img src="img/tour-9.jpg" alt="图片未显示"/>
+                        <span><img src="img/dr-z.png" alt="图片未显示"/>&nbsp;出发日期：2017/2/12</span>
+                    <h4 class="rm">ReadMore</h4>
+                    </p>
+                    <p class="p3">
+                        <a href="#">
+                            <img src="img/tour-10.jpg" alt="图片未显示"/>
+                        </a>
+                    </p>
+                </div>
+            </div>
+            <div class="tour-list-cen" >
+                <div class="tour-cen-dzf">
+                    <p class="p1">
+                        <img src="img/drlybticon.png" alt="图片未显示"/>
+                        <a href="#">初识三亚</a>
+                    </p>
+
+                    <p class="p2">
+                        <img src="img/tour-5.jpg" alt="图片未显示"/>
+                        <span><img src="img/dr-z.png" alt="图片未显示"/>&nbsp;出发日期：2017/2/12</span>
+                    <h4 class="rm">ReadMore</h4>
+                    </p>
+
+                    <p class="p3">
+                        <a href="#">
+                            <img src="img/tour-11.jpg" alt="图片未显示"/>
+                        </a>
+                    </p>
+                </div>
+                <div class="tour-cen-dzc tour-cen-dzf">
+                    <p class="p3" style="margin-top:-8px">
+                        <a href="#">
+                            <img src="img/tour-12.jpg" alt="图片未显示"/>
+                        </a>
+                    </p>
+                    <p class="p1">
+                        <img src="img/drlybticon.png" alt="图片未显示"/>
+                        <a href="#">相遇不易在巴厘</a>
+                    </p>
+                    <p class="p2">
+                        <img src="img/tour-13.jpg" alt="图片未显示"/>
+                        <span><img src="img/dr-z.png" alt="图片未显示"/>&nbsp;出发日期：2017/2/12</span>
+                    <h4 class="rm">ReadMore</h4>
+                    </p>
+                </div>
+                <div class="tour-cen-dzr tour-cen-dzf">
+                    <p class="p1">
+                        <img src="img/drlybticon.png" alt="图片未显示"/>
+                        <a href="#">多彩贵州，寻梦之旅</a>
+                    </p>
+                    <p class="p2">
+                        <img src="img/tour-14.jpg" alt="图片未显示"/>
+                        <span><img src="img/dr-z.png" alt="图片未显示"/>&nbsp;出发日期：2016/11/16</span>
+                    <h4 class="rm">ReadMore</h4>
+                    </p>
+                    <p class="p3">
+                        <a href="#">
+                            <img src="img/tour-15.jpg" alt="图片未显示"/>
+                        </a>
+                    </p>
+                </div>
+            </div>
+            <div class="tour-list-cen">
+                <div class="tour-cen-dzf">
+                    <p class="p1">
+                        <img src="img/drlybticon.png" alt="图片未显示"/>
+                        <a href="#">加勒比游乐园一日游</a>
+                    </p>
+
+                    <p class="p2">
+                        <img src="img/tour-5.jpg" alt="图片未显示"/>
+                        <span><img src="img/dr-z.png" alt="图片未显示"/>&nbsp;出发日期：2016/8/31</span>
+                    <h4 class="rm">ReadMore</h4>
+                    </p>
+
+                    <p class="p3">
+                        <a href="#">
+                            <img src="img/tour-16.jpg" alt="图片未显示"/>
+                        </a>
+                    </p>
+                </div>
+                <div class="tour-cen-dzc tour-cen-dzf">
+                    <p class="p3" style="margin-top:-8px">
+                        <a href="#">
+                            <img src="img/tour-17.jpg" alt="图片未显示"/>
+                        </a>
+                    </p>
+                    <p class="p1">
+                        <img src="img/drlybticon.png" alt="图片未显示"/>
+                        <a href="#">安静的美男子---奥兰多</a>
+                    </p>
+                    <p class="p2">
+                        <img src="img/tour-18.jpg" alt="图片未显示"/>
+                        <span><img src="img/dr-z.png" alt="图片未显示"/>&nbsp;出发日期：2016/7/20</span>
+                    <h4 class="rm">ReadMore</h4>
+                    </p>
+                </div>
+                <div class="tour-cen-dzr tour-cen-dzf">
+                    <p class="p1">
+                        <img src="img/drlybticon.png" alt="图片未显示"/>
+                        <a href="#">恋恋不忘苏梅岛</a>
+                    </p>
+                    <p class="p2">
+                        <img src="img/tour-19.jpg" alt="图片未显示"/>
+                        <span><img src="img/dr-z.png" alt="图片未显示"/>&nbsp;出发日期：2016/6/30</span>
+                    <h4 class="rm">ReadMore</h4>
+                    </p>
+                    <p class="p3">
+                        <a href="#">
+                            <img src="img/tour-20.jpg" alt="图片未显示"/>
+                        </a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+<!--jqiery特效-->
+    <script>
+        $(function(){
+            var index3 = 0;
+            $('.tour-dr .tour-f').find('div').eq(0).show();
+            $('.tour-dr .tour-f .tour-list li').hover(function(){
+                index3 = $(this).index();
+                $(this).addClass('hover-tour-list').siblings().removeClass('hover-tour-list');
+                $('.tour-dr .tour-f').children('div').eq(index3).show().siblings('div').hide();
+            },function(){});
+            });
+    </script>
+</body>
+</html>

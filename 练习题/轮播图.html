@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>轮播器</title>
+    <link rel="stylesheet" href="css/lbq.css"/>
+    <script src="../JQuery/jquery-3.3.1.min.js"></script>
+    <style type="text/css">
+        *{
+            margin:0;
+            padding:0
+        }
+        #content{
+            height:550px;
+            width:590px;
+            border:2px dotted red;
+            padding:6px
+        }
+        #content .cont1{
+            height:470px;
+            width:590px;
+            overflow:hidden;
+            position: relative
+        }
+        #content .cont1 .cont2{
+            height: 470px;
+            width:1000%;
+            border:1px solid #3388ff;
+            position: absolute;
+            top:0px;
+            left:0px;
+        }
+        #content .cont1  .cont2 img{
+            float:left;
+        }
+        #content ul.lbt0{
+            height: 20px;
+            overflow: hidden;
+            border:1px solid red;
+            margin-top: 10px;
+        }
+        #content ul.lbt0 li{
+            line-height:20px;
+            list-style:none;
+            font-size:15px;
+            text-align: center;
+        }
+        #content ul.lbt1 li{
+            float:left;
+            width:15px;
+            height:15px;
+            list-style:none;
+            background:#3388ff;
+            border-radius:50%;
+            margin:10px;
+        }
+        #content ul.lbt1 li.hover{
+            background:#d81480;
+        }
+    </style>
+
+</head>
+<body>
+    <div id="content">
+        <div class="cont1">
+            <div class="cont2">
+                    <img src="../img/1.jpg" alt=""/>
+                    <img src="../img/2.jpg" alt=""/>
+                    <img src="../img/3.jpg" alt=""/>
+                    <img src="../img/4.jpg" alt=""/>
+                    <img src="../img/5.jpg" alt=""/>
+            </div>
+        </div>
+        <ul class="lbt0">
+            <li>第一张图片</li>
+            <li>第二张图片</li>
+            <li>第三张图片</li>
+            <li>第四张图片</li>
+            <li>第五张图片</li>
+        </ul>
+
+        <ul class="lbt1">
+            <li class="hover"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+    </div>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+            var _index = 0; //定义了序列号变量
+            var timeInterVal=null;
+            $('#content .lbt1 li').hover(function(){
+                clearInterval(timeInterVal);
+                //当前li添加class='hover' 其他同级li的移除类名
+                _index=$(this).index();//获取当前的序列号
+                $(this).addClass('hover').siblings().removeClass('hover');
+                $('#content .cont2').animate({left:'-'+_index*590+'px'},1000);
+                //序列号相同的显示，同级的隐藏。
+                $('#content .lbt0 li').eq(_index).show().siblings().hide();
+            },function(){autoPlay();});
+            //自动轮播
+            function autoPlay(){
+               timeInterVal= setInterval(function(){
+                    if(_index<=4){
+                        if(_index==4){_index=-1;}
+                            _index++;
+                        $('#content .lbt1 li').eq(_index).addClass('hover').siblings().removeClass('hover');
+                        $('#content .cont2').animate({left:'-'+_index*590+'px'},1000);
+                        //序列号相同的显示，同级的隐藏。
+                        $('#content .lbt0 li').eq(_index).show().siblings().hide();
+                    }else{_index=-1;}
+                },1000);
+            }
+            autoPlay();
+        });
+    </script>
+</body>
+</html>

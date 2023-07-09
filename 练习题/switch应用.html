@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>从键盘中接受整数参数，如果该数为1-7，则打印对应的星期，否则打印非法参数</title>
+    <script type="text/javascript">
+        /*
+          switch(条件){
+          case 条件1：语句1;break;
+          case 条件2：语句2;break;
+          case 条件3：语句3;break;
+          default：语句14;break;
+          }
+         */
+        var jp;
+         jp=prompt("请从键盘中输入一个整数：");
+        switch (parseInt(jp)){    //parseInt()使其他类型转换为数字类型。
+            case 1: alert("星期一"); break;
+            case 2: alert("星期二"); break;
+            case 3: alert("星期三"); break;
+            case 4: alert("星期四"); break;
+            case 5: alert("星期五"); break;
+            case 6: alert("星期六"); break;
+            case 7: alert("星期七"); break;
+            default:alert("输入的数字不合法");break;
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

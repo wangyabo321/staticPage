@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>求三个数中最小值</title>
+    <script type="text/javascript">
+        var num1 = parseInt(prompt("请输入第一个数："));
+        var num2 = parseInt(prompt("请输入第二个数："));
+        var num3 = parseInt(prompt("请输入第三个数："));
+        var min; //122 36 144 ;36 144 122; 144 122 36
+       min = (num1 < num2) ?(num1 < num3 ? num1 : num3 ):(num2 < num3 ? num2 : num3);
+        alert("三个数中最小的是 min="+min);
+    </script>
+</head>
+<body>
+</body>
+</html>

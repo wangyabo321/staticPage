@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>移动web开发</title>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <link rel="stylesheet" href="css/reset.css"/>
+    <script src="js/index.js"></script>
+    <style>
+        body{
+            padding:0;
+            margin:0;
+            box-sizing:border-box;
+            -webkit-tap-highlight-color:transparent;
+        }
+        .jd-container{
+            width:100%;
+            /*640px 和设计稿的大小有关系*/
+            /*psd图 640px大小的设计稿 750px大小的设计稿*/
+            /*
+             *640px 宽度是早期标准  标准参考设备  IPhone4 完美显示
+             *750px 宽度是现在主流标准 标准参考设备  Iphone6 完美显示
+             */
+            max-width:640px;/*640px:基于设计稿， 目的不失真*/
+            min-width:320px;/*320px:保证网页内容布局*/
+            margin:0 auto;
+            height:200px;
+            background:red;
+        }
+        .jd-search{
+            width:100%;
+            height:40px;
+            max-width:640px;
+            min-width:320px;
+            background:#000;
+            margin:0 auto;
+        }
+        .jd-search .jd-img{
+            background-size:100px 100px;
+            width:50px;
+            height: 40px;
+            background:blue;
+        }
+        .jd-search .jd-input form{
+            width:100%;
+            height:40px;
+            background:#4cae4c;
+        }
+        .jd-search .jd-sear{
+            width:50px;
+            height:40px;
+            background:gray;
+        }
+    </style>
+</head>
+<body>
+    <!-- 版心容器 在320px-640px宽度直接自适应 -->
+    <div class="jd-container">
+        <div class="jd-search">
+            <div class="jd-img f_left">
+                <!--<img src="img/京东.png" alt="图片未显示"/>-->
+            </div>
+            <div class="jd-input f-left">
+                <form action="">
+                    <input type="text"/>
+                </form>
+            </div>
+            <div class="jd-sear f_right"></div>
+        </div>
+        <div class="banner"></div>
+    </div>
+</body>
+</html>

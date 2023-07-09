@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<div>
+<!--<canvas id="myCanvas" width="300" height="200" style="border: 2px solid blue">-->
+    <!--Your browser does not support the canvas element.-->
+<!--</canvas>-->
+<!--<script type="text/javascript">-->
+    <!--var d=document.getElementById("myCanvas");-->
+    <!--var cxt= d.getContext("2d");-->
+    <!--cxt.fillStyle="rgb(0,0,200,0.5)";-->
+    <!--cxt.fillRect(10,20,100,100);-->
+<!--//    cxt.strokeRect(30,30,200,200);-->
+<!--//</script>-->
+</div>
+ <canvas id="myCanvas" width="300" height="300" style="border:1px blue solid"></canvas>
+<script type="text/javascript">
+    var c=document.getElementById("myCanvas");
+    var cxt= c.getContext("2d");
+    cxt.fillstyle="#ffaa00";
+    cxt.beginPath();
+    cxt.arc(70,80,25,0,Math.PI*2,true);
+    cxt.closePath();
+    cxt.fill();
+</script>
+
+</body>
+</html>

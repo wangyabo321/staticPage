@@ -1,0 +1,22 @@
+*{margin:0;padding:0;font-family: 'Î¢ÈíÑÅºÚ', 'Times New Roman', Times, serif;color:white}
+.container{width:320px;height:610px;background:#000;margin:50px auto;}
+.container .nav{height:23px;width:100%;background:url(../image/1.png) no-repeat;}
+.container .top{height:30px;width:100%;background:url(../image/2.png) no-repeat;
+    font-size:20px;text-align:center;line-height:30px;}
+.container .logo{height:218px;width:100%;text-align: center;}
+.container .logo p{margin:5px 0;}
+.container .logo img{border-radius:50%;}
+@keyframes CDTurn{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+.img-CDTurn{animation:3s linear infinite CDTurn;}
+
+.lrc .lrc-container{margin:5px auto 0 auto;width:220px;height:270px;text-align:center;
+    font-size:14px;overflow:hidden}
+.footer{height:45px;width:100%;margin-top:4px;}
+.footer .icon-container{height:45px;width:135px;margin:0 auto;}
+.footer .icon{height:35px;width:35px;border-radius:50%;margin-top:5px;}
+.footer .icon-container .icon-s{float:left;background:url(../image/icon-x.png) no-repeat;
+    background-size:35px 35px;border-radius:50%;}
+.footer .icon-zt{height:45px;width:45px;border-radius:50%;float:left;margin:0 10px 0 10px;
+    background:url(../image/icon-play.png) no-repeat;background-size:45px 45px;}
+.footer .icon-container .icon-x{float:right;background:url(../image/icon-s.png) no-repeat;
+    background-size:35px 35px;border-radius:50%;}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>表格隔行变色</title>
+    <script src="../JQuery/jquery-3.3.1.min.js"></script>
+        <style>
+        #table{
+            margin: 0 auto;
+            border-collapse:collapse;
+            text-align: center;
+        }
+        #table td{
+           width:80px;
+           height:50px;
+           border:1px solid red;
+        }
+    </style>
+    <!--原生的JS的标签页-->
+    <script type="text/javascript">
+      /*  window.onload=function(){
+            var oTable = document.getElementById("table");
+            var oTr = oTable.getElementsByTagName("tr");
+            for(var i = 0;i < oTr.length;i++){
+                if(i%2==0){
+                    oTr[i].style.background = "yellow";
+                }
+                else{
+                    oTr[i].style.background = "blue";
+                }
+            }
+        };*/
+     </script>
+    <!--JQuery实现表格隔行换色-->
+    <script>
+        $(function(){
+            $("#table tr:even").css('background','blue');
+            $("#table tr:odd").css('background','yellow');
+        });
+    </script>
+   </head>
+<body>
+<table id="table">
+    <thead>
+    <tr>
+        <td>数学</td>
+        <td>英语</td>
+        <td>政治</td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>90</td>
+        <td>87</td>
+        <td>78</td>
+    </tr>
+    <tr>
+        <td>76</td>
+        <td>84</td>
+        <td>94</td>
+    </tr>
+    <tr>
+        <td>68</td>
+        <td>95</td>
+        <td>88</td>
+    </tr>
+    </tbody>
+</table>
+<script type="text/javascript">
+//        $("#table tr:even").css('background','blue');
+//        $("#table tr:odd").css('background','yellow');
+          $("#table tr").filter(':even').css('background','blue').end()
+                 .filter(':odd').css('background','yellow');
+</script>
+</body>
+</html>

@@ -1,0 +1,422 @@
+/*导航条样式开始*/
+nav{
+    width: 100%;
+    height: 66px;
+    border-bottom: 5px solid #54ABD4;
+    background-color: #88C5E1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 666;
+}
+.wrap{
+    margin: 0 auto;
+}
+nav>.wrap>div{
+    float: left;
+}
+.logo{
+    height: 66px;
+}
+.search{
+    position: relative;
+}
+.search>input,.enter>input[type="email"],.enter>input[type="password"]{
+    border-radius: 3px;
+    background-color: #F5F5F5;
+    border: 1px solid #F5F5F5;
+    padding-left: 10px;
+    box-sizing: border-box;
+    transition: all .5s;
+}
+.search>input{
+    width: 100%;
+    height: 40px;
+    margin-top: 13px;
+    padding-left: 10px;
+}
+.search>input:hover{
+    background-color: #fff;
+    border:1px solid #54ABD4;
+}
+.search>button{
+    width: 40px;
+    height: 34px;
+    background-color: #F5F5F5;
+    border: none;
+    position: absolute;
+    right: 2px;
+    top: 16px ;
+}
+.list>ul{
+    float: right;
+}
+.list li{
+    float: left;
+    line-height: 66px;
+}
+.list a{
+    color: #fff;
+    font-size: 16px;
+    padding: 10px;
+    margin: 0 4px;
+}
+.list .active{
+    border-bottom: 2px solid #fff;
+}
+.list a:hover{
+    border-bottom: 2px solid #fff;
+}
+/*导航条样式结束*/
+/*导航样式开始*/
+.enter_box{
+    margin-top: 71px;
+    width: 100%;
+    background:url("../images/homeImg.png") no-repeat;
+    background-size: 100% 100%;
+}
+.MiLogo,.enter{
+    float: left;
+}
+.enter{
+    text-align: left;
+}
+.zc{
+    overflow: hidden;
+}
+.zc>li{
+    float: left;
+}
+.zc a{
+    color: #fff;
+    font-size: 16px;
+    padding-bottom: 5px;
+    margin-right: 15px;
+}
+.zc a:hover{
+    border-bottom: 2px solid #fff;
+}
+.zc .zc_active{
+    border-bottom: 2px solid #fff;
+}
+.enter>input,.enter>button{
+    width: 100%;
+    height: 40px;
+    margin-bottom: 15px;
+}
+.enter>input[type="email"]{
+    margin-top: 25px;
+}
+
+.enter>input[type="email"]:hover,.enter>input[type="password"]:hover{
+    background-color: #fff;
+    border: 1px solid #54ABD4;
+}
+.enter>input[type="checkbox"]{
+    width: 13px;
+    height: 13px;
+    float: left;
+    position: relative;
+    top: 3px;
+    margin-right: 5px;
+}
+.enter b{
+    color: #fff;
+    font-weight: normal;
+}
+.enter>a{
+    float: right;
+    color: #fff;
+}
+.enter>button{
+    height: 44px;
+    border: none;
+    background-color: #88C5E1;
+    color: #fff;
+    font-size: 18px;
+    margin-top: 5px;
+    border-radius: 5px;
+    box-shadow: 0 7px #54ABD4;
+}
+.enter>button:hover{
+    transform: translate(0,4px);
+    box-shadow: 0 3px #54ABD4;
+}
+/*导航样式结束*/
+/*主体样式开始*/
+.container{
+    width: 100%;
+    background-color: #EEEDE8;
+    padding-top: 40px;
+}
+.new,.hot,.tag{
+    background-color: #fff;
+    overflow: hidden;
+    padding-bottom: 86px;
+}
+.new_wrap,.hot_wrap,.tag_wrap{
+    width: 93%;
+    margin: 0 auto;
+}
+.new h4,.hot h4,.tag h4{
+    text-align: left;
+    color: #666;
+    font-size: 18px;
+    font-weight: normal;
+    margin: 40px 0;
+    padding: 4px 16px;
+    border-left: 3px solid #88C5E1;
+}
+.new_box{
+    width: 100%;
+}
+.new_box>div{
+    width: 48%;
+    background-color: #F5F5F5;
+    float: left;
+}
+
+.new_box img{
+    width: 100%;
+}
+.new_box p{
+    line-height: 72px;
+    color: #999;
+    font-size: 16px;
+}
+.hot{
+    margin-top: 20px;
+    padding-bottom: 50px;
+    margin-bottom: 20px;
+}
+.hot_box{
+    width: 100%;
+}
+.hot_box>div{
+    background-color: #F5F5F5;
+    float: left;
+    margin-bottom: 17px;
+    padding: 52px 16px;
+    box-sizing: border-box;
+}
+.hot_box>div>img{
+    width: 44px; ;
+}
+.title{
+    color: #333333;
+    font-size: 16px;
+    font-weight: bolder;
+    margin: 16px 0;
+    display: block;
+    /*溢出文字省略号显示*/
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.xy>a{
+    background-color: #88C5E1;
+    padding:5px;
+    border-radius: 2px ;
+    color: #fff;
+    font-size: 12px;
+}
+.xy>a:hover{
+    background-color: #54ABD4;
+}
+.star{
+    margin: 10px 0;
+    font-size: 12px;
+    color: #F9CA5A;
+}
+.star>img{
+    width: 12px;
+}
+.star>span{
+    position: relative;
+    top: 2px;
+}
+.xf>a{
+    color: #7d7d7d;
+    font-size: 12px;
+}
+.xf>.pj:hover{
+    border-bottom: 1px solid #54abd4;
+    color: #54abd4;
+}
+
+/*主体样式结束*/
+
+
+
+
+
+/*pc端样式开始*/
+@media screen and (min-width: 992px) {
+    .wrap{
+        width: 87%;
+        position: relative;
+    }
+    .logo{
+        width: 25%;
+        background: url("../images/Brand.png") no-repeat;
+        background-size: 186px;
+        background-position: left;
+    }
+    .search{
+        width: 39%;
+    }
+    .list{
+        width: 36%;
+    }
+    .btn{
+        display: none;
+    }
+    /*导航*/
+    .enter_box{
+        height: 460px;
+    }
+    .MiLogo,.enter{
+        padding-top: 75px;
+    }
+    .MiLogo{
+        width: 70%;
+    }
+    .enter{
+        width: 30%;
+    }
+    /*主体样式*/
+    .new,.hot{
+        width: 64%;
+    }
+    .new_box>div:first-child{
+        margin-right: 4%;
+    }
+    .hot_box>div{
+        width: 32%;
+    }
+    .hot_box>div:nth-child(2),.hot_box>div:nth-child(5){
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+    .tag{
+        width: 30%;
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+}
+/*pc端样式结束*/
+/*ipad样式*/
+@media screen and (min-width: 768px) and (max-width: 991px) {
+    .wrap{
+        width: 82%;
+    }
+    .logo{
+        width: 17%;
+        background: url("../images/Brand-M.png") no-repeat;
+        background-size: 88.8px;
+        background-position: left;
+    }
+    .search{
+        width: 38%;
+    }
+    .list{
+        width: 45%;
+    }
+    .btn{
+        display: none;
+    }
+    /*导航*/
+    .enter_box{
+        height: 338px;
+    }
+    .MiLogo,.enter{
+        padding-top: 15px;
+    }
+    .MiLogo{
+        width: 53%;
+    }
+    .enter{
+        width: 47%;
+    }
+    /*主体样式*/
+    .new,.hot,.tag{
+        width: 100%;
+    }
+    .new_box>div:first-child{
+        margin-right: 4%;
+    }
+    .hot_box>div{
+        width: 49%;
+    }
+    .hot_box>div:nth-child(1),.hot_box>div:nth-child(5),.hot_box>div:nth-child(3){
+       margin-right: 2%;
+    }
+}
+/*ipad结束*/
+/*移动端样式开始*/
+@media screen and (max-width: 767px) {
+    .wrap{
+        width: 96%;
+    }
+    .logo{
+        width: 18%;
+        background: url("../images/Brand-S.png") no-repeat;
+        background-size: 38px;
+        background-position: left;
+    }
+    .search{
+        width: 65%;
+    }
+    .list{
+        width: 17%;
+    }
+    .list>ul{
+        display: none;
+    }
+    .btn{
+        float: right;
+        margin-top: 11px;
+    }
+    /*导航*/
+    .enter_box{
+        height: 365px;
+    }
+    .MiLogo,.enter{
+        padding-top: 80px;
+    }
+    .MiLogo{
+        display: none;
+    }
+    .enter{
+        width: 100%;
+    }
+    /*主体样式*/
+    .new,.hot,.tag{
+        width: 100%;
+    }
+    .new_box>div{
+        width:100%;
+        margin-bottom: 20px;
+    }
+    .hot_box>div{
+        width: 100%;
+    }
+}
+/*移动端样式结束*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

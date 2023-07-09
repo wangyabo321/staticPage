@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>div定位绝对定位</title>
+    <style>
+  .pos_ads{
+           position:absolute;
+           left: 300px;
+           top: 300px;
+           background-color: blue;
+         }
+  #first{
+            position: absolute;
+            left: 110px;
+            top: 10px;
+            width: 400px;
+            height: 100px;
+            background-color: brown;
+            z-index: 1;
+        }
+   #second{
+            position: absolute;
+            left: 110px;
+            top: 10px;
+            width: 300px;
+            height: 100px;
+            background:fuchsia;
+            z-index: 2;
+        }
+   #third{
+            width: 100px;
+            height: 150px;
+            background: #FFD700;
+        }
+
+    </style>
+</head>
+<body>
+<h2 class="pos_ads">这是带有绝对定位的标题</h2>
+<div id="first">第一层</div>
+<div id="second">第二层与第一层位置相同通过设置z-index决定</div>
+<div id="third">第三层，没有指定布局属性</div>
+</body>
+</html>

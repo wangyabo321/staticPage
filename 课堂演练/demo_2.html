@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+    *{
+    margin:0px;
+    padding:0px;
+    }
+    div{
+        width:500px;
+        height:450px;
+        background:url(../img/5.jpg) no-repeat;
+        position:relative
+    }
+    div:hover::before{
+        content:"<";
+        font-size:25px;
+        line-height:40px;
+        text-align: center;
+        color:#878181;
+        width:20px;
+        height:40px;
+        background:rgba(0,0,0,0.3);
+        position:absolute;
+        top:50%;left: 0px;
+    }
+    div:hover::after{
+        content:">";
+        font-size:25px;
+        text-align: center;
+        line-height:40px;
+        color:#878181;
+        width:20px;
+        height:40px;
+        background:rgba(0,0,0,0.3);
+        position:absolute;
+        top:50%;
+        right: 0px;
+    }
+    ul{ position:absolute;
+        bottom:25px;
+        left:50px;
+    }
+    ul li{
+        list-style:none;
+        float:left;
+        width:15px;
+        height:15px;
+        font-size:10px;
+        text-align:center;
+        line-height: 15px;
+        border-radius:50%;
+        background:#787793;
+        margin-right:8px;
+        cursor:pointer;
+           }
+    ul li:hover{
+        background:white;
+    }
+    </style>
+</head>
+<body>
+    <div id="div">
+        <ul id="ul">
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>7</li>
+            <li>8</li>
+        </ul>
+    </div>
+    <script>
+        var oDiv = document.getElementById('div');
+        var oUl = document.getElementById('ul');
+        var oLi = oUl.getElementsByTagName('li');
+        var arr= ["../img/1.jpg","../img/2.jpg","../img/3.jpg","../img/4.jpg",
+                "../img/5.jpg","../img/6.jpg","../img/7.jpg","../img/8.jpg"];
+        for(var i = 0;i < oLi.length;i++){
+         oLi[i].onmouseover = function(){
+             oDiv.style.backgroundImage = '../img/1.jpg';
+         };
+        }
+    </script>
+</body
+</html>

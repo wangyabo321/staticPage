@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>轮播图</title>
+    <link rel="icon" href="imags/favicon.ico"/>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <style>
+        a{text-decoration:none;color:#a3a3a3;}
+        *{margin:0;padding:0}
+        .play-chart-con{
+            width:1200px;
+            height:255px;
+            margin:0 auto;
+            overflow: hidden;
+            position: relative;
+            margin-top:20px;
+        }
+        .cart-con{
+            height:255px;
+            width:2150pc;
+        }
+        .play-chart-con .chart-list{
+            list-style:none;
+        }
+        .play-chart-con .chart-list li:nth-child(2n+1){
+            border:1px solid #e5e5e5;
+        }
+        .play-chart-con .chart-list li:nth-child(2n){
+            border-top:1px solid #e5e5e5;
+            border-bottom:1px solid #e5e5e5;
+        }
+        .play-chart-con .chart-list li{
+            width:215px;
+            height:252px;
+            float:left;
+            text-align: center;
+        }
+        .play-chart-con a.pointer{
+            width:25px;
+            height:72px;
+            position:absolute;
+        }
+        .play-chart-con a.point-left{
+             top:75px;
+             left:0;
+            background:url(imags/icon-header.png) no-repeat -57px -86px #d2d2d2;
+         }
+        .play-chart-con a.point-left:hover{
+            background-position:-95px -86px;
+        }
+        .play-chart-con a.point-right{
+            top:75px;
+            right:0;
+            background:url(imags/icon-header.png) no-repeat -135px -86px #d2d2d2;
+        }
+        .play-chart-con a.point-right:hover{
+            background-position:-173px -86px;
+        }
+        .cart-con ul.chart-list li a img{
+            width:215px;
+            height:255px;
+        }
+        .cart-con ul.chart-list li.p-list p:nth-child(1){
+            padding-top:20px;
+        }
+        .cart-con ul.chart-list li.p-list p:nth-child(2){
+            margin-top:20px;
+            font-size:18px;
+        }
+        .cart-con ul.chart-list li.p-list p:nth-child(3){
+            font-size:10px;
+            color:#a4a4a4;
+            margin-top:10px;
+        }
+        .cart-con ul.chart-list li.p-list p:nth-child(4){
+            margin-top:5px;
+            font-size:14px;
+        }
+        .cart-con ul.chart-list li.p-list p:nth-child(4) a{
+            color:#900;
+        }
+    </style>
+    <script>
+        $(function(){
+            $(".point-left").click(function(){
+                $(".cart-con ul").css("marginLeft","-935px");
+            });
+            $(".point-right").click(function(){
+                $(".cart-con ul").css("marginLeft","0px");
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="play-chart-con">
+        <a class="point-left pointer" href="#"></a>
+        <a class="point-right pointer" href="#"></a>
+        <div class="cart-con">
+            <ul class="chart-list">
+                <li class="p-list">
+                    <p>
+                        <a href="#"><img style="width:125px;height:115px;" src="imags/hw-jj7.png" alt=""/></a>
+                    </p>
+                    <p><a href="#">华为子母路由&nbsp;Q2</a></p>
+                    <p><a href="#">&nbsp;</a></p>
+                    <p><a href="#">￥799</a></p>
+                </li>
+                <li class="p-list">
+                    <p>
+                        <a href="#">
+                            <img style="width:125px;height:115px;" src="imags/hw-jj8.png" alt=""/>
+                        </a>
+                    </p>
+                    <p><a href="#">华为4G路由&nbsp;2</a></p>
+                    <p><a href="#">4G全网通APP远程管理</a></p>
+                    <p><a href="#">￥389</a></p>
+                </li>
+                <li class="p-list">
+                    <p>
+                        <a href="#"><img style="width:125px;height:115px;" src="imags/hw-jj8.jpg" alt=""/></a>
+                    </p>
+                    <p><a href="#">华为随行WiFi&nbsp;2&nbsp;mini</a></p>
+                    <p><a href="#">4G三网通USB供电</a></p>
+                    <p><a href="#">￥299</a></p>
+
+                </li>
+                <li class="p-list">
+                    <p>
+                        <a href="#"><img style="width:125px;height:115px;" src="imags/hw-jj10.jpg" alt=""/></a>
+                    </p>
+                    <p><a href="#">华为随行WiFi&nbsp;2&nbsp;Pro</a></p>
+                    <p><a href="#">4G三网通&nbsp;大充电宝</a></p>
+                    <p><a href="#">￥899</a></p>
+                </li>
+                <li class="p-list">
+                    <p>
+                        <a href="#"><img style="width:125px;height:115px;" src="imags/hw-jj11.jpg" alt=""/></a>
+                    </p>
+                    <p style="margin-top:-4px;"><a href="#">华为路由器&nbsp;WS318 <br/>增强版</a></p>
+                    <p><a href="#">双天线覆盖广&nbsp;自动加速</a></p>
+                    <p><a href="#">￥99</a></p>
+                </li>
+                <li class="p-list">
+                    <p>
+                        <a href="#"><img style="width:125px;height:115px;" src="imags/hw-jj12.jpg" alt=""/></a>
+                    </p>
+                    <p><a href="#">华为路由&nbsp;WS832</a></p>
+                    <p><a href="#">1200M天线路由器</a></p>
+                    <p><a href="#">￥249</a></p>
+                </li>
+
+                <li class="p-list">
+                    <p>
+                        <a href="#"><img style="width:125px;height:115px;" src="imags/hw-jj13.jpg" alt=""/></a>
+                    </p>
+                    <p><a href="#">华为路由&nbsp;WS550</a></p>
+                    <p><a href="#">双核450M路由器</a></p>
+                    <p><a href="#">￥169</a></p>
+                </li>
+                <li class="p-list">
+                    <p>
+                        <a href="#"><img style="width:125px;height:115px;" src="imags/hw-jj11.jpg" alt=""/></a>
+                    </p>
+                    <p style="margin-top:-4px;"><a href="#">华为子母路由器&nbsp;Q1 <br/>子路由</a></p>
+                    <p><a href="#">自动同步母路由WiFi名称和密码</a></p>
+                    <p><a href="#">￥179</a></p>
+                </li>
+                <li class="p-list">
+                    <p>
+                        <a href="#"><img style="width:125px;height:115px;" src="imags/hw-jj15.jpg" alt=""/></a>
+                    </p>
+                        <p><a href="#">华为&nbsp;PT500</a></p>
+                    <p><a href="#">500M电力线适配器</a></p>
+                    <p><a href="#">￥139</a></p>
+                </li>
+                <li class="p-list">
+                    <p>
+                        <a href="#"><img style="width:125px;height:115px;" src="imags/hw-jj16.jpg" alt=""/></a>
+                    </p>
+                    <p><a href="#">华为&nbsp;WS331c</a></p>
+                    <p><a href="#">300Mbps无线扩展器</a></p>
+                    <p><a href="#">￥119</a></p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
